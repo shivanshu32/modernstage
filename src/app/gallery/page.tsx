@@ -11,7 +11,7 @@ import 'yet-another-react-lightbox/styles.css';
 const weddingImages = [
   '/wedding/8b9fb8dd-bc9e-4902-b6c1-5ab8c4676cbb.jpeg',
   '/wedding/1000003552.jpg',
-  '/wedding/Decor_ Beautiful Decoration _Chakshu photography & Films_.jpeg',
+  '/wedding/Decor_-Beautiful-Decoration-_Chakshu-photography-&-Films_.jpeg',
   // ...add more wedding images as needed
 ];
 
