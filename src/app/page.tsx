@@ -241,44 +241,55 @@ const venueImages = [
   '/venue/timthumb.jpg',
 ];
 
-const SimpleReactLightbox = dynamic(() => import('simple-react-lightbox').then(mod => mod.default), { ssr: false });
-const SRLWrapper = dynamic(() => import('simple-react-lightbox').then(mod => mod.SRLWrapper), { ssr: false });
+const Lightbox = dynamic(() => import('yet-another-react-lightbox'), { ssr: false });
+import 'yet-another-react-lightbox/styles.css';
 
 function VenueCarousel() {
   const [current, setCurrent] = useState(0);
+  const [open, setOpen] = useState(false);
+  const [imageIndex, setImageIndex] = useState(0);
   const length = venueImages.length;
 
   // Show two images per slide
   const nextSlide = () => setCurrent(current + 2 >= length ? 0 : current + 2);
   const prevSlide = () => setCurrent(current - 2 < 0 ? (length % 2 === 0 ? length - 2 : length - 1) : current - 2);
 
+  const slides = venueImages.map(src => ({ src }));
+
   return (
-    <SimpleReactLightbox>
-      <SRLWrapper>
-        <div className="relative w-screen max-w-none mx-auto">
-          <div className="flex flex-row gap-0 overflow-hidden min-h-[28rem]">
-            {[0, 1].map((offset) => {
-              const idx = (current + offset) % length;
-              const img = venueImages[idx];
-              return (
-                <div key={img} className="w-1/2 relative h-[28rem]">
-                  <a href={img} data-attribute="SRL">
-                    <Image
-                      src={img}
-                      alt={`Venue ${idx + 1}`}
-                      fill
-                      className="object-cover w-full h-full"
-                    />
-                  </a>
-                </div>
-              );
-            })}
-          </div>
-          <button onClick={prevSlide} className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 text-white p-3 rounded-full z-10"><FaChevronLeft size={24} /></button>
-          <button onClick={nextSlide} className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 text-white p-3 rounded-full z-10"><FaChevronRight size={24} /></button>
-        </div>
-      </SRLWrapper>
-    </SimpleReactLightbox>
+    <div className="relative w-screen max-w-none mx-auto">
+      <div className="flex flex-row gap-0 overflow-hidden min-h-[28rem]">
+        {[0, 1].map((offset) => {
+          const idx = (current + offset) % length;
+          const img = venueImages[idx];
+          return (
+            <div 
+              key={img} 
+              className="w-1/2 relative h-[28rem] cursor-pointer"
+              onClick={() => {
+                setImageIndex(idx);
+                setOpen(true);
+              }}
+            >
+              <Image
+                src={img}
+                alt={`Venue ${idx + 1}`}
+                fill
+                className="object-cover w-full h-full"
+              />
+            </div>
+          );
+        })}
+      </div>
+      <button onClick={prevSlide} className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 text-white p-3 rounded-full z-10"><FaChevronLeft size={24} /></button>
+      <button onClick={nextSlide} className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 text-white p-3 rounded-full z-10"><FaChevronRight size={24} /></button>
+      <Lightbox
+        open={open}
+        close={() => setOpen(false)}
+        index={imageIndex}
+        slides={slides}
+      />
+    </div>
   );
 }
 
