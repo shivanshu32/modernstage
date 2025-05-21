@@ -11,7 +11,7 @@ export default function FashionWeeks() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/wedding/fashionweekhero.jpg"
+            src="/wedding/fashionshowhd.png"
             alt="Fashion Weeks"
             fill
             className="object-cover brightness-50"

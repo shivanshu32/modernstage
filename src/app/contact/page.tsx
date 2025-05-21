@@ -1,8 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaYoutube, FaPinterest, FaLinkedin } from 'react-icons/fa';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -12,11 +13,58 @@ export default function Contact() {
     eventType: '',
     message: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{ success: boolean; message: string } | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
+  
+  // Initialize EmailJS once when component mounts
+  useEffect(() => {
+    // Initialize with your public key
+    emailjs.init("SS7aB-TQWD2q2tzAB");
+  }, []);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus(null);
+    
+    emailjs.send(
+      "service_6by4y8w",
+      "template_has978f",
+      {
+        name: formData.name,
+        email: formData.email,
+        eventtype: formData.eventType,
+        contactnumber: formData.phone,
+        msg: formData.message,
+        title: "Contact Form Submission",
+      }
+    )
+    .then((response) => {
+      console.log('Email sent successfully:', response);
+      setSubmitStatus({
+        success: true,
+        message: 'Thank you for your message! We will get back to you soon.'
+      });
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        phone: '',
+        eventType: '',
+        message: '',
+      });
+    })
+    .catch((error) => {
+      console.error('Email sending failed:', error);
+      setSubmitStatus({
+        success: false,
+        message: 'There was an error sending your message. Please try again or contact us directly.'
+      });
+    })
+    .finally(() => {
+      setIsSubmitting(false);
+    });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -66,7 +114,7 @@ export default function Contact() {
               className="bg-gray-900 rounded-lg p-8"
             >
               <h2 className="text-2xl font-semibold mb-6">Send us a Message</h2>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
                     Name
@@ -141,11 +189,19 @@ export default function Contact() {
                     required
                   ></textarea>
                 </div>
+                {submitStatus && (
+                  <div className={`p-4 rounded-md ${submitStatus.success ? 'bg-green-800/50' : 'bg-red-800/50'}`}>
+                    <p className={`text-sm ${submitStatus.success ? 'text-green-200' : 'text-red-200'}`}>
+                      {submitStatus.message}
+                    </p>
+                  </div>
+                )}
                 <button
                   type="submit"
-                  className="w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-md transition-colors"
+                  disabled={isSubmitting}
+                  className={`w-full bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-6 rounded-md transition-colors ${isSubmitting ? 'opacity-70 cursor-not-allowed' : ''}`}
                 >
-                  Send Message
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
                 </button>
               </form>
             </motion.div>

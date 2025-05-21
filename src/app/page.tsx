@@ -249,7 +249,7 @@ const services = [
   {
     title: 'Fashion Weeks',
     description: 'Professional fashion show production and event management.',
-    image: '/liveconcert/live12.jpg',
+    image: '/wedding/fashionshowhd.png',
     href: '/services/fashion-weeks',
   },
   {
