@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaInstagram, FaYoutube, FaPinterest, FaLinkedin } from 'react-icons/fa';
 
 export default function Footer() {
   return (
@@ -48,8 +48,8 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-yellow-400 mb-4">Contact Us</h4>
             <ul className="space-y-2 text-sm">
               <li>A-55, Second floor, Sector 2 Noida 201301</li>
-              <li>Phone: (555) 123-4567</li>
-              <li>Email: info@modernstage.com</li>
+              <li>Phone: +91 9910064524</li>
+              <li>Email: modernstageevents@gmail.com</li>
             </ul>
           </div>
 
@@ -57,16 +57,16 @@ export default function Footer() {
           <div>
             <h4 className="text-lg font-semibold text-yellow-400 mb-4">Follow Us</h4>
             <div className="flex space-x-4">
-              <a href="#" className="hover:text-yellow-400 transition-colors">
-                <FaFacebook className="h-6 w-6" />
-              </a>
-              <a href="#" className="hover:text-yellow-400 transition-colors">
-                <FaTwitter className="h-6 w-6" />
-              </a>
-              <a href="#" className="hover:text-yellow-400 transition-colors">
+              <a href="https://instagram.com/modernstageevents" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">
                 <FaInstagram className="h-6 w-6" />
               </a>
-              <a href="#" className="hover:text-yellow-400 transition-colors">
+              <a href="https://youtube.com/@modernstageevents2889?si=F3qqr8sCBEyaWQb-" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">
+                <FaYoutube className="h-6 w-6" />
+              </a>
+              <a href="https://pin.it/7z79m3546" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">
+                <FaPinterest className="h-6 w-6" />
+              </a>
+              <a href="https://www.linkedin.com/company/modern-stage-events/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BnG1Xg0M%2BR4eeMNqMHPt%2B3A%3D%3D" target="_blank" rel="noopener noreferrer" className="hover:text-yellow-400 transition-colors">
                 <FaLinkedin className="h-6 w-6" />
               </a>
             </div>

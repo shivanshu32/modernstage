@@ -11,7 +11,7 @@ export default function FashionWeeks() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/fashion-hero.jpg"
+            src="/wedding/fashionweekhero.jpg"
             alt="Fashion Weeks"
             fill
             className="object-cover brightness-50"
@@ -94,40 +94,8 @@ export default function FashionWeeks() {
         </div>
       </section>
 
-      {/* Portfolio */}
-      <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            <span className="text-gradient">Featured Events</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {portfolio.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="relative group overflow-hidden rounded-lg"
-              >
-                <div className="relative h-80">
-                  <Image
-                    src={item.image}
-                    alt={item.title}
-                    fill
-                    className="object-cover transition-transform duration-300 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
-                    <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center p-4">
-                      <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                      <p className="text-sm">{item.description}</p>
-                    </div>
-                  </div>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Spacer section to maintain layout rhythm */}
+      <div className="py-10 bg-black"></div>
 
       {/* CTA */}
       <section className="py-20 bg-gray-900">
@@ -212,20 +180,4 @@ const eventTypes = [
   },
 ];
 
-const portfolio = [
-  {
-    title: 'Spring Fashion Week',
-    description: 'Annual spring fashion week featuring top designers.',
-    image: '/fashion1.jpg',
-  },
-  {
-    title: 'Brand Launch Event',
-    description: 'Exclusive launch event for luxury fashion brand.',
-    image: '/fashion2.jpg',
-  },
-  {
-    title: 'Fashion Exhibition',
-    description: 'Interactive fashion exhibition with digital elements.',
-    image: '/fashion3.jpg',
-  },
-]; 
+// Featured events section removed as requested 

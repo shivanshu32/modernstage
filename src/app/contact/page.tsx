@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaFacebook } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaYoutube, FaPinterest, FaLinkedin } from 'react-icons/fa';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -164,14 +164,14 @@ export default function Contact() {
                     <FaPhone className="text-yellow-500 mt-1" />
                     <div>
                       <h3 className="text-lg font-medium text-gray-200">Phone</h3>
-                      <p className="text-gray-400">(555) 123-4567</p>
+                      <p className="text-gray-400">+91 9910064524</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
                     <FaEnvelope className="text-yellow-500 mt-1" />
                     <div>
                       <h3 className="text-lg font-medium text-gray-200">Email</h3>
-                      <p className="text-gray-400">info@modernstage.com</p>
+                      <p className="text-gray-400">modernstageevents@gmail.com</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -179,43 +179,49 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg font-medium text-gray-200">Address</h3>
                       <p className="text-gray-400">
-                        123 Event Street<br />
-                        New York, NY 10001
+                        A-55, Second floor<br />
+                        Sector 2, Noida 201301
                       </p>
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div>
-                <h2 className="text-2xl font-semibold mb-6">Business Hours</h2>
-                <div className="space-y-2">
-                  <p className="text-gray-400">Monday - Friday: 9:00 AM - 6:00 PM</p>
-                  <p className="text-gray-400">Saturday: 10:00 AM - 4:00 PM</p>
-                  <p className="text-gray-400">Sunday: Closed</p>
-                </div>
-              </div>
 
               <div>
                 <h2 className="text-2xl font-semibold mb-6">Follow Us</h2>
                 <div className="flex space-x-4">
                   <a
-                    href="#"
+                    href="https://instagram.com/modernstageevents"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors"
                   >
-                    <FaFacebook className="h-6 w-6" />
+                    <FaInstagram className="h-6 w-6" />
                   </a>
                   <a
-                    href="#"
+                    href="https://youtube.com/@modernstageevents2889?si=F3qqr8sCBEyaWQb-"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors"
                   >
-                    <FaEnvelope className="h-6 w-6" />
+                    <FaYoutube className="h-6 w-6" />
                   </a>
                   <a
-                    href="#"
+                    href="https://pin.it/7z79m3546"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors"
                   >
-                    <FaMapMarkerAlt className="h-6 w-6" />
+                    <FaPinterest className="h-6 w-6" />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/modern-stage-events/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BnG1Xg0M%2BR4eeMNqMHPt%2B3A%3D%3D"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors"
+                  >
+                    <FaLinkedin className="h-6 w-6" />
                   </a>
                 </div>
               </div>

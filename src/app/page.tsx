@@ -11,15 +11,16 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-screen flex items-center justify-center overflow-hidden">
+      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero-bg.jpg"
-            alt="Event background"
+            src="/wedding/1000003550.jpg"
+            alt="Modern Stage Events - Elegant Wedding Decor"
             fill
-            className="object-cover brightness-50"
+            className="object-cover brightness-75"
             priority
           />
+          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
         </div>
         <div className="relative z-10 text-center px-4">
           <motion.h1
@@ -73,6 +74,38 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {stats.map((stat, index) => (
+              <motion.div
+                key={stat.value}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="bg-gray-900 rounded-lg p-8 text-center hover:bg-gray-800 transition-all hover:transform hover:scale-105 border border-gray-800"
+              >
+                <motion.div 
+                  className="text-4xl md:text-5xl font-bold mb-2 text-yellow-400"
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 100,
+                    delay: index * 0.2 + 0.3,
+                    duration: 0.8
+                  }}
+                >
+                  {stat.value}
+                </motion.div>
+                <p className="text-gray-300 text-lg">{stat.label}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Services Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -81,31 +114,32 @@ export default function Home() {
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div
+              <Link 
+                href={service.href} 
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-gray-900 rounded-lg overflow-hidden hover:bg-gray-800 transition-colors"
+                className="block cursor-pointer group"
               >
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: index * 0.2 }}
+                  className="bg-gray-900 rounded-lg overflow-hidden hover:bg-gray-800 transition-colors h-full"
+                >
                 <div className="relative h-48">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-cover"
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
                   <p className="text-gray-400 mb-4">{service.description}</p>
-                  <Link
-                    href={service.href}
-                    className="text-yellow-400 hover:text-yellow-500 transition-colors inline-flex items-center"
-                  >
+                  <div className="text-yellow-400 group-hover:text-yellow-500 transition-colors inline-flex items-center">
                     Learn More
                     <svg
-                      className="w-4 h-4 ml-2"
+                      className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -117,9 +151,10 @@ export default function Home() {
                         d="M9 5l7 7-7 7"
                       />
                     </svg>
-                  </Link>
+                  </div>
                 </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             ))}
           </div>
         </div>
@@ -218,11 +253,30 @@ const services = [
     href: '/services/fashion-weeks',
   },
   {
-    title: 'Decor & Design',
-    description: 'Transform spaces with our creative decoration and design services.',
-    image: '/wedding/future wedding plans.jpeg',
-    href: '/services/decor-design',
+    title: 'Venue Booking',
+    description: 'Find and secure the perfect location for your special event.',
+    image: '/wedding/1000003590.jpg',
+    href: '/services/venue-booking',
   },
+];
+
+const stats = [
+  {
+    value: '10+',
+    label: 'Years of Experience'
+  },
+  {
+    value: '1000+',
+    label: 'Events Organized'
+  },
+  {
+    value: '100+',
+    label: 'Venues Partnered'
+  },
+  {
+    value: '50+',
+    label: 'Artists Managed'
+  }
 ];
 
 const venueImages = [
@@ -330,7 +384,7 @@ const galleryImages = [
   // 3 from wedding
   '/wedding/8b9fb8dd-bc9e-4902-b6c1-5ab8c4676cbb.jpeg',
   '/wedding/1000003552.jpg',
-  '/wedding/Decor_ Beautiful Decoration _Chakshu photography & Films_.jpeg',
+  '/wedding/1000003571.jpg',
   // 3 from liveconcert
   '/liveconcert/live1.jpg',
   '/liveconcert/live6.jpg',
