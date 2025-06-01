@@ -58,7 +58,8 @@ export default function Footer() {
             <h4 className="text-lg font-semibold text-yellow-400 mb-4">Contact Us</h4>
             <ul className="space-y-2 text-sm">
               <li>A-55, Second floor, Sector 2 Noida 201301</li>
-              <li>Phone: +91 9910064524 | +91 98181 84077</li>
+              <li>Phone: +91 9910064524</li>
+              <li>Phone: +91 98181 84077</li>
               <li>Email: modernstageevents@gmail.com</li>
             </ul>
           </div>

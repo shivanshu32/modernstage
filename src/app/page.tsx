@@ -6,56 +6,15 @@ import Link from 'next/link';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import ClientLogos from '@/components/ClientLogos';
 import FeaturedVideos from '@/components/FeaturedVideos';
+import HeroCarousel from '@/components/HeroCarousel';
+import { heroSlides } from '@/data/heroCarousel';
 
 
 export default function Home() {
   return (
     <div className="min-h-screen">
-      {/* Hero Section */}
-      <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <Image
-            src="/wedding/1000003550.jpg"
-            alt="Modern Stage Events - Elegant Wedding Decor"
-            fill
-            className="object-cover brightness-75"
-            priority
-          />
-          <div className="absolute inset-0 bg-black bg-opacity-20"></div>
-        </div>
-        <div className="relative z-10 text-center px-4">
-          <motion.h1
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-4xl md:text-6xl font-bold mb-6"
-          >
-            <span className="bg-gradient-to-r from-yellow-400 to-yellow-600 bg-clip-text text-transparent">
-              Modern Stage Events
-            </span>
-          </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl md:text-2xl text-gray-200 mb-8"
-          >
-            Creating Unforgettable Moments
-          </motion.p>
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <Link
-              href="/contact"
-              className="bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-8 rounded-full transition-colors"
-            >
-              Get Started
-            </Link>
-          </motion.div>
-        </div>
-      </section>
+      {/* Hero Carousel Section */}
+      <HeroCarousel slides={heroSlides} autoScrollInterval={5000} />
 
       {/* About Us / Our Story Section */}
       <section className="py-20 bg-gray-900">
@@ -86,7 +45,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-gray-900 rounded-lg p-8 text-center hover:bg-gray-800 transition-all hover:transform hover:scale-105 border border-gray-800"
+                className="bg-gray-200 rounded-lg p-8 text-center hover:bg-gray-300 transition-all hover:transform hover:scale-105 border border-gray-300"
               >
                 <motion.div 
                   className="text-4xl md:text-5xl font-bold mb-2 text-yellow-400"
@@ -101,7 +60,7 @@ export default function Home() {
                 >
                   {stat.value}
                 </motion.div>
-                <p className="text-gray-300 text-lg">{stat.label}</p>
+                <p className="text-gray-700 text-lg">{stat.label}</p>
               </motion.div>
             ))}
           </div>
