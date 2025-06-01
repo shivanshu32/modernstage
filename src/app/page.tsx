@@ -3,9 +3,9 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import dynamic from 'next/dynamic';
-import { useState } from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import TestimonialCarousel from '@/components/TestimonialCarousel';
+import ClientLogos from '@/components/ClientLogos';
+
 
 export default function Home() {
   return (
@@ -59,14 +59,15 @@ export default function Home() {
       {/* About Us / Our Story Section */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6">
-            <span className="text-gradient">About Us / Our Story</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-2">
+            <span className="text-gradient">Creating Moments That Matter</span>
           </h2>
-          <p className="text-xl text-gray-300 mb-6">
-            <strong>Modern Stage Events</strong> was founded by <strong>Mr. Ronit Aggrawal</strong> in 2015 with a vision to redefine event experiences in India. Over the years, we have become a trusted name for creating unforgettable moments, blending creativity, precision, and passion in every event we manage.
+          <p className="text-xl text-yellow-400 mb-6">For Over 15 Years</p>
+          <p className="text-lg text-gray-300 mb-6">
+            At Modern Stage Events, we do more than plan events — we bring ideas to life. With 15+ years of experience, we've handled everything from fashion shows and corporate events to weddings, concerts, and artist management from small destination weddings to large global productions, we manage it all with creativity, precision, and style. Whether it's booking venues, managing artists, or organizing unforgettable experiences — we've got it covered.
           </p>
-          <p className="text-lg text-gray-400 mb-4">
-            <strong>Our Values:</strong> Excellence, Innovation, Integrity, and Client-Centricity. We believe every event is unique and deserves a personalized approach.
+          <p className="text-lg text-gray-300 mb-4">
+            We blend design, planning, and execution to deliver events that leave a lasting impression.
           </p>
           <p className="text-lg text-gray-400">
             <strong>What Sets Us Apart:</strong> Our experienced team, attention to detail, and commitment to delivering seamless, memorable events—whether it's a wedding, corporate gala, concert, or social celebration.
@@ -160,15 +161,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Venue Booking Section */}
-      <section className="py-20 bg-gray-900 relative w-screen left-1/2 right-1/2 -ml-[50vw] -mr-[50vw]">
-        <div className="max-w-7xl mx-auto px-0 sm:px-0 lg:px-0">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            <span className="text-gradient">Venue Booking</span>
-          </h2>
-          <VenueCarousel />
-        </div>
-      </section>
+
 
       {/* Testimonials Section */}
       <section className="py-20 bg-black">
@@ -176,17 +169,13 @@ export default function Home() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             <span className="text-gradient">Testimonials</span>
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {testimonials.map((t, idx) => (
-              <div key={idx} className="bg-gray-900 rounded-lg p-8 shadow-lg flex flex-col items-center text-center hover:bg-gray-800 transition-colors">
-                <img src={t.photo} alt={t.name} className="w-20 h-20 rounded-full mb-4 object-cover border-4 border-yellow-500" />
-                <p className="text-lg text-gray-200 mb-4 italic">“{t.quote}”</p>
-                <span className="font-semibold text-yellow-400">{t.name}</span>
-              </div>
-            ))}
-          </div>
+          {/* Auto-scrollable Testimonial Carousel */}
+          <TestimonialCarousel testimonials={testimonials} autoScrollInterval={5000} />
         </div>
       </section>
+
+      {/* Our Clients Section */}
+      <ClientLogos />
 
       {/* Gallery Section */}
       <section className="py-20 bg-gray-900">
@@ -262,7 +251,7 @@ const services = [
 
 const stats = [
   {
-    value: '10+',
+    value: '15+',
     label: 'Years of Experience'
   },
   {
@@ -279,106 +268,8 @@ const stats = [
   }
 ];
 
-const venueImages = [
-  '/venue/2Jodhpur Holidays 2.jpg',
-  '/venue/8f251493047672d7s-1.jpg',
-  '/venue/Beach-Hotel-HD-Screensavers-Wallpapers.jpg',
-  '/venue/The-Great-Ballroom-Banquet-Setup--Le-Meridien-Dubai-Hotel---Conference-Center.jpg',
-  '/venue/The-Great-Ballroom-Foyer-Area---Le-Meridien-Dubai-Hotel---Conference-Center-1.jpg',
-  '/venue/The-Great-Ballroom-Foyer-Area--Le-Meridien-Dubai-Hotel---Conference-Center.jpg',
-  '/venue/World-India-Luxury-hotels-in-Goa-Wallpapers.jpg',
-  '/venue/aveda-hotel-ludhiana.jpg',
-  '/venue/best-resorts-india-udaivilas.jpg',
-  '/venue/conferencechamber-6-the-orchid-hotel-mumbai-bombay-crgwer1.jpg',
-  '/venue/hotel-terrace-world-hd-wallpaper-2880x1800-24307.jpg',
-  '/venue/item2.rendition.slideshowHorizontal.boutique-heritage-hotels-india-03.jpg',
-  '/venue/timthumb.jpg',
-];
-
-const Lightbox = dynamic(() => import('yet-another-react-lightbox'), { ssr: false });
-import 'yet-another-react-lightbox/styles.css';
-
-function VenueCarousel() {
-  const [current, setCurrent] = useState(0);
-  const [open, setOpen] = useState(false);
-  const [imageIndex, setImageIndex] = useState(0);
-  const length = venueImages.length;
-
-  // Show two images per slide
-  const nextSlide = () => setCurrent(current + 2 >= length ? 0 : current + 2);
-  const prevSlide = () => setCurrent(current - 2 < 0 ? (length % 2 === 0 ? length - 2 : length - 1) : current - 2);
-
-  const slides = venueImages.map(src => ({ src }));
-
-  return (
-    <div className="relative w-screen max-w-none mx-auto">
-      <div className="flex flex-row gap-0 overflow-hidden min-h-[28rem]">
-        {[0, 1].map((offset) => {
-          const idx = (current + offset) % length;
-          const img = venueImages[idx];
-          return (
-            <div 
-              key={img} 
-              className="w-1/2 relative h-[28rem] cursor-pointer"
-              onClick={() => {
-                setImageIndex(idx);
-                setOpen(true);
-              }}
-            >
-              <Image
-                src={img}
-                alt={`Venue ${idx + 1}`}
-                fill
-                className="object-cover w-full h-full"
-              />
-            </div>
-          );
-        })}
-      </div>
-      <button onClick={prevSlide} className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/60 text-white p-3 rounded-full z-10"><FaChevronLeft size={24} /></button>
-      <button onClick={nextSlide} className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/60 text-white p-3 rounded-full z-10"><FaChevronRight size={24} /></button>
-      <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        index={imageIndex}
-        slides={slides}
-      />
-    </div>
-  );
-}
-
-const testimonials = [
-  {
-    name: 'Amit Sharma',
-    photo: 'https://randomuser.me/api/portraits/men/32.jpg',
-    quote: 'Modern Stage Events made our wedding truly magical. Every detail was perfect!'
-  },
-  {
-    name: 'Priya Singh',
-    photo: 'https://randomuser.me/api/portraits/women/44.jpg',
-    quote: 'The team handled our corporate event with professionalism and creativity. Highly recommended!'
-  },
-  {
-    name: 'Rahul Verma',
-    photo: 'https://randomuser.me/api/portraits/men/65.jpg',
-    quote: 'Our concert was a huge success thanks to their flawless execution.'
-  },
-  {
-    name: 'Sneha Patel',
-    photo: 'https://randomuser.me/api/portraits/women/68.jpg',
-    quote: 'The decor and design for our engagement was breathtaking. Thank you!'
-  },
-  {
-    name: 'Vikram Mehra',
-    photo: 'https://randomuser.me/api/portraits/men/76.jpg',
-    quote: 'From start to finish, the Modern Stage team exceeded our expectations.'
-  },
-  {
-    name: 'Anjali Desai',
-    photo: 'https://randomuser.me/api/portraits/women/85.jpg',
-    quote: 'Their attention to detail and creativity made our event unforgettable.'
-  },
-];
+// Import testimonials from data file
+import { testimonials } from '@/data/testimonials';
 
 const galleryImages = [
   // 3 from wedding

@@ -50,14 +50,10 @@ export default function About() {
                 <span className="text-gradient">Our Story</span>
               </h2>
               <p className="text-gray-300 mb-4">
-                Founded in 2010, Modern Stage Events has been at the forefront of event management,
-                creating memorable experiences for clients across the globe. Our journey began with a
-                simple mission: to transform ordinary gatherings into extraordinary celebrations.
+                Modern Stage Events was founded in 2010 by Mr. Ronit Aggrawal, with a bold vision to redefine event experiences in India. What began as a passion project has grown into one of the country's most trusted and innovative event management companies.
               </p>
               <p className="text-gray-300">
-                Over the years, we've grown from a small team of passionate event planners to a
-                full-service event management company, handling everything from intimate gatherings
-                to large-scale corporate events.
+                With over 15 years of experience, we've delivered some of the most iconic and large-scale events across industries — from high-end fashion shows, grand weddings, and exclusive corporate events, to live concerts, celebrity artist management, and international destination weddings. Our track record includes collaborations with leading brands, renowned designers, and top-tier performers, making us a preferred partner for high-impact events.
               </p>
             </motion.div>
             <motion.div

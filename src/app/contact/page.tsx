@@ -2,7 +2,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaYoutube, FaPinterest, FaLinkedin } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaInstagram, FaYoutube, FaPinterest, FaLinkedin, FaFacebook } from 'react-icons/fa';
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
@@ -221,6 +221,7 @@ export default function Contact() {
                     <div>
                       <h3 className="text-lg font-medium text-gray-200">Phone</h3>
                       <p className="text-gray-400">+91 9910064524</p>
+                      <p className="text-gray-400">+91 98181 84077</p>
                     </div>
                   </div>
                   <div className="flex items-start space-x-4">
@@ -247,6 +248,14 @@ export default function Contact() {
               <div>
                 <h2 className="text-2xl font-semibold mb-6">Follow Us</h2>
                 <div className="flex space-x-4">
+                  <a
+                    href="https://www.facebook.com/ModernStageEvent"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors"
+                  >
+                    <FaFacebook className="h-6 w-6" />
+                  </a>
                   <a
                     href="https://instagram.com/modernstageevents"
                     target="_blank"

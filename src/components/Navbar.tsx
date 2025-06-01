@@ -115,6 +115,9 @@ export default function Navbar() {
 
           {/* Social Media Links */}
           <div className="hidden md:flex items-center space-x-4">
+            <a href="https://www.facebook.com/ModernStageEvent" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-yellow-400 transition-colors">
+              <FaFacebook className="h-5 w-5" />
+            </a>
             <a href="https://instagram.com/modernstageevents" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-yellow-400 transition-colors">
               <FaInstagram className="h-5 w-5" />
             </a>
