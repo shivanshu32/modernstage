@@ -7,7 +7,9 @@ import TestimonialCarousel from '@/components/TestimonialCarousel';
 import ClientLogos from '@/components/ClientLogos';
 import FeaturedVideos from '@/components/FeaturedVideos';
 import HeroCarousel from '@/components/HeroCarousel';
+import Gallery from '@/components/Gallery';
 import { heroSlides } from '@/data/heroCarousel';
+import { homeGalleryPreview } from '@/data/galleryImages';
 
 
 export default function Home() {
@@ -83,6 +85,7 @@ export default function Home() {
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
                   className="bg-gray-900 rounded-lg overflow-hidden hover:bg-gray-800 transition-colors h-full"
                 >
@@ -143,26 +146,12 @@ export default function Home() {
       {/* Gallery Section */}
       <section className="py-20 bg-gray-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            <span className="text-gradient">Gallery</span>
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mb-8">
-            {galleryImages.map((img, idx) => (
-              <div key={img} className="relative group overflow-hidden rounded-lg shadow-lg">
-                <Image
-                  src={img}
-                  alt={`Gallery ${idx + 1}`}
-                  width={600}
-                  height={400}
-                  className="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-300"
-                />
-                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300 flex items-center justify-center">
-                  <span className="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">View</span>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div className="text-center">
+          <Gallery 
+            images={homeGalleryPreview} 
+            title="Gallery" 
+            maxImages={9} 
+          />
+          <div className="text-center mt-8">
             <Link href="/gallery" className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-8 rounded-full transition-colors">
               View Full Gallery
             </Link>
@@ -234,13 +223,4 @@ const stats = [
 // Import testimonials from data file
 import { testimonials } from '@/data/testimonials';
 
-const galleryImages = [
-  // 3 from wedding
-  '/wedding/8b9fb8dd-bc9e-4902-b6c1-5ab8c4676cbb.jpeg',
-  '/wedding/1000003552.jpg',
-  '/wedding/1000003571.jpg',
-  // 3 from liveconcert
-  '/liveconcert/live1.jpg',
-  '/liveconcert/live6.jpg',
-  '/liveconcert/live12.jpg',
-];
+// Gallery images are now imported from src/data/galleryImages.ts

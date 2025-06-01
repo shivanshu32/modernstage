@@ -2,71 +2,68 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import Image from 'next/image';
-import dynamic from 'next/dynamic';
+import Gallery from '@/components/Gallery';
+import { 
+  weddingImages, 
+  eventProductionImages, 
+  venueImages,
+  corporateImages,
+  governmentEventImages,
+  productLaunchImages,
+  allGalleryImages,
+  galleryCategories 
+} from '@/data/galleryImages';
 
-const Lightbox = dynamic(() => import('yet-another-react-lightbox'), { ssr: false });
-import 'yet-another-react-lightbox/styles.css';
-
-const weddingImages = [
-  '/wedding/8b9fb8dd-bc9e-4902-b6c1-5ab8c4676cbb.jpeg',
-  '/wedding/1000003552.jpg',
-  '/wedding/1000003571.jpg',
-  // ...add more wedding images as needed
-];
-
-const liveConcertImages = [
-  '/liveconcert/live1.jpg',
-  '/liveconcert/live6.jpg',
-  '/liveconcert/live12.jpg',
-  // ...add more live concert images as needed
-];
-
-const galleryImages = [
-  ...weddingImages,
-  ...liveConcertImages,
-];
-
-export default function Gallery() {
-  const [open, setOpen] = useState(false);
-  const [imageIndex, setImageIndex] = useState(0);
-
-  const slides = galleryImages.map(src => ({ src }));
+export default function GalleryPage() {
+  const [activeCategory, setActiveCategory] = useState('all');
+  
+  // Filter images based on active category
+  const getFilteredImages = () => {
+    switch(activeCategory) {
+      case 'wedding':
+        return weddingImages;
+      case 'eventproduction':
+        return eventProductionImages;
+      case 'venue':
+        return venueImages;
+      case 'corporate':
+        return corporateImages;
+      case 'government':
+        return governmentEventImages;
+      case 'productlaunch':
+        return productLaunchImages;
+      case 'all':
+      default:
+        return allGalleryImages;
+    }
+  };
 
   return (
     <div className="min-h-screen py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <h1 className="text-4xl md:text-5xl font-bold text-center mb-12 text-gradient">Gallery</h1>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          {galleryImages.map((img, idx) => (
-            <div 
-              key={img} 
-              className="relative group overflow-hidden rounded-lg shadow-lg cursor-pointer"
-              onClick={() => {
-                setImageIndex(idx);
-                setOpen(true);
-              }}
+        <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-gradient">Gallery</h1>
+        
+        {/* Category filters */}
+        <div className="flex flex-wrap justify-center gap-2 mb-12">
+          {galleryCategories.map(category => (
+            <button
+              key={category.id}
+              onClick={() => setActiveCategory(category.id)}
+              className={`px-3 py-1.5 text-sm rounded-full transition-colors ${activeCategory === category.id 
+                ? 'bg-yellow-500 text-black font-semibold' 
+                : 'bg-gray-800 text-gray-300 hover:bg-gray-700'}`}
             >
-              <Image
-                src={img}
-                alt={`Gallery ${idx + 1}`}
-                width={600}
-                height={400}
-                className="object-cover w-full h-64 group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-40 transition duration-300 flex items-center justify-center">
-                <span className="text-white text-lg font-semibold opacity-0 group-hover:opacity-100 transition-opacity duration-300">View</span>
-              </div>
-            </div>
+              {category.name}
+            </button>
           ))}
         </div>
+        
+        {/* Gallery component */}
+        <Gallery 
+          images={getFilteredImages()} 
+          title="" 
+        />
       </div>
-      <Lightbox
-        open={open}
-        close={() => setOpen(false)}
-        index={imageIndex}
-        slides={slides}
-      />
     </div>
   );
 } 
