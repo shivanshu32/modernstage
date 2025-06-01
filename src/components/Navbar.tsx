@@ -54,12 +54,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed w-full z-50 transition-all duration-300 bg-black/30 backdrop-blur-sm">
+    <nav className="fixed w-full z-50 transition-all duration-300 bg-luxury-900/30 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center group">
             <div className="relative transition-transform duration-300 group-hover:scale-105">
-              <Image src="/logo.png" alt="Modern Stage Events Logo" width={120} height={120} className="mr-4 transition-all duration-300 group-hover:brightness-125 group-hover:drop-shadow-[0_0_8px_rgba(251,191,36,0.6)]" />
+              <Image src="/logo.png" alt="Modern Stage Events Logo" width={120} height={120} className="mr-4 transition-all duration-300 group-hover:brightness-125 group-hover:drop-shadow-[0_0_8px_rgba(230,179,0,0.6)]" />
             </div>
           </Link>
 
@@ -76,13 +76,13 @@ export default function Navbar() {
                     <>
                       <button
                         onClick={() => setActiveDropdown(activeDropdown === link.name ? null : link.name)}
-                        className="text-gray-300 hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
+                        className="text-gray-300 hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center"
                       >
                         {link.name}
                         <ChevronDownIcon className="h-4 w-4 ml-1" />
                       </button>
                       <div 
-                        className={`absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-black/95 backdrop-blur-sm ring-1 ring-black ring-opacity-5 ${
+                        className={`absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-luxury-800/95 backdrop-blur-sm ring-1 ring-luxury-700 ring-opacity-5 ${
                           activeDropdown === link.name ? 'block' : 'hidden'
                         }`}
                       >
@@ -91,7 +91,7 @@ export default function Navbar() {
                             <Link
                               key={subItem.name}
                               href={subItem.href}
-                              className="block px-4 py-2 text-sm text-gray-300 hover:bg-gray-800 hover:text-yellow-400"
+                              className="block px-4 py-2 text-sm text-gray-300 hover:bg-dark-800 hover:text-primary-400"
                               onClick={() => setActiveDropdown(null)}
                             >
                               {subItem.name}
@@ -103,7 +103,7 @@ export default function Navbar() {
                   ) : (
                     <Link
                       href={link.href}
-                      className="text-gray-300 hover:text-yellow-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                      className="text-gray-300 hover:text-primary-400 px-3 py-2 rounded-md text-sm font-medium transition-colors"
                     >
                       {link.name}
                     </Link>
@@ -115,19 +115,19 @@ export default function Navbar() {
 
           {/* Social Media Links */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="https://www.facebook.com/ModernStageEvent" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-yellow-400 transition-colors">
+            <a href="https://www.facebook.com/ModernStageEvent" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary-400 transition-colors">
               <FaFacebook className="h-5 w-5" />
             </a>
-            <a href="https://instagram.com/modernstageevents" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-yellow-400 transition-colors">
+            <a href="https://instagram.com/modernstageevents" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary-400 transition-colors">
               <FaInstagram className="h-5 w-5" />
             </a>
-            <a href="https://youtube.com/@modernstageevents2889?si=F3qqr8sCBEyaWQb-" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-yellow-400 transition-colors">
+            <a href="https://youtube.com/@modernstageevents2889?si=F3qqr8sCBEyaWQb-" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary-400 transition-colors">
               <FaYoutube className="h-5 w-5" />
             </a>
-            <a href="https://pin.it/7z79m3546" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-yellow-400 transition-colors">
+            <a href="https://pin.it/7z79m3546" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary-400 transition-colors">
               <FaPinterest className="h-5 w-5" />
             </a>
-            <a href="https://www.linkedin.com/company/modern-stage-events/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BnG1Xg0M%2BR4eeMNqMHPt%2B3A%3D%3D" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-yellow-400 transition-colors">
+            <a href="https://www.linkedin.com/company/modern-stage-events/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BnG1Xg0M%2BR4eeMNqMHPt%2B3A%3D%3D" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-primary-400 transition-colors">
               <FaLinkedin className="h-5 w-5" />
             </a>
           </div>
@@ -136,7 +136,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-yellow-400 focus:outline-none"
+              className="text-gray-300 hover:text-primary-400 focus:outline-none"
             >
               {isOpen ? (
                 <XMarkIcon className="h-6 w-6" />
@@ -154,7 +154,7 @@ export default function Navbar() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="md:hidden bg-black/95 backdrop-blur-sm"
+          className="md:hidden bg-luxury-900/95 backdrop-blur-sm"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
@@ -163,7 +163,7 @@ export default function Navbar() {
                   <>
                     <button
                       onClick={() => setActiveDropdown(activeDropdown === link.name ? null : link.name)}
-                      className="w-full text-left text-gray-300 hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium"
+                      className="w-full text-left text-gray-300 hover:text-primary-400 block px-3 py-2 rounded-md text-base font-medium"
                     >
                       {link.name}
                     </button>
@@ -173,7 +173,7 @@ export default function Navbar() {
                           <Link
                             key={subItem.name}
                             href={subItem.href}
-                            className="block px-3 py-2 text-gray-300 hover:text-yellow-400 text-sm"
+                            className="block px-3 py-2 text-gray-300 hover:text-primary-400 text-sm"
                             onClick={() => {
                               setActiveDropdown(null);
                               setIsOpen(false);
@@ -188,7 +188,7 @@ export default function Navbar() {
                 ) : (
                   <Link
                     href={link.href}
-                    className="text-gray-300 hover:text-yellow-400 block px-3 py-2 rounded-md text-base font-medium"
+                    className="text-gray-300 hover:text-primary-400 block px-3 py-2 rounded-md text-base font-medium"
                     onClick={() => setIsOpen(false)}
                   >
                     {link.name}

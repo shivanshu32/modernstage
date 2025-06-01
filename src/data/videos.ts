@@ -22,18 +22,18 @@ export const featuredVideos: Video[] = [
   },
   {
     id: 'IIGGJxpS5IA', // Using same ID as placeholder, replace with actual video IDs
-    title: 'Minisou - Corporate Event',
+    title: 'Miniso - Corporate Event',
     description: 'Elevating events to new heights'
   },
   {
     id: 'uWuzMPspeQg', // Using same ID as placeholder, replace with actual video IDs
     title: 'Fashion Show pearl academy',
-    description: 'Elevating events to new heights'
+    description: 'Fashion week production & management'
   },
   {
     id: '3SJGaW985sQ', // Using same ID as placeholder, replace with actual video IDs
     title: 'Fashion show',
-    description: 'Elevating events to new heights'
+    description: 'Complete event management'
   }
 ];
 

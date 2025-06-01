@@ -39,10 +39,10 @@ export default function ArtistManagement() {
       </section>
 
       {/* Services Overview */}
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-luxury-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            <span className="text-gradient">Our Management Services</span>
+            <span className="text-gradient">Professional artist representation and management</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {managementServices.map((service, index) => (
@@ -51,7 +51,7 @@ export default function ArtistManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-gray-900 rounded-lg p-6 hover:bg-gray-800 transition-colors"
+                className="bg-luxury-700 rounded-lg p-6 hover:bg-luxury-600 transition-colors"
               >
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
@@ -71,7 +71,7 @@ export default function ArtistManagement() {
       </section>
 
       {/* Our Approach */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-luxury-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             <span className="text-gradient">Our Approach</span>
@@ -95,20 +95,20 @@ export default function ArtistManagement() {
       </section>
 
       {/* Spacer section to maintain layout rhythm */}
-      <div className="py-10 bg-black"></div>
+      <div className="py-10 bg-luxury-900"></div>
 
       {/* CTA */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-luxury-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            <span className="text-gradient">Ready to Take Your Career to the Next Level?</span>
+            <span className="text-gradient">Ready to Work with Professional Artists?</span>
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let us help you build a successful career in the entertainment industry.
+            Let us connect you with the perfect talent for your next event.
           </p>
           <Link
             href="/contact"
-            className="inline-block bg-yellow-500 hover:bg-yellow-600 text-black font-semibold py-3 px-8 rounded-full transition-colors"
+            className="inline-block bg-primary-500 hover:bg-primary-600 text-dark-900 font-semibold py-3 px-8 rounded-full transition-colors"
           >
             Get in Touch
           </Link>
@@ -120,15 +120,15 @@ export default function ArtistManagement() {
 
 const managementServices = [
   {
-    title: 'Career Development',
-    description: 'Strategic planning and development of artist careers.',
-    icon: '📈',
+    title: 'Booking & Representation',
+    description: 'Professional representation and booking services for artists.',
+    icon: '🎭',
     features: [
-      'Career strategy development',
-      'Brand building',
-      'Media relations',
-      'Social media management',
-      'Performance opportunities',
+      'Event bookings',
+      'Performance scheduling',
+      'Venue negotiations',
+      'Tour coordination',
+      'Festival placements',
     ],
   },
   {

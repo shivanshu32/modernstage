@@ -6,7 +6,7 @@ export interface HeroSlide {
 
 export const heroSlides: HeroSlide[] = [
   {
-    image: '/wedding/1000003550.jpg',
+    image: '/venue/World-India-Luxury-hotels-in-Goa-Wallpapers.jpg',
     title: 'Modern Stage Events',
     subtitle: 'Creating Unforgettable Moments'
   },
@@ -16,7 +16,7 @@ export const heroSlides: HeroSlide[] = [
     subtitle: 'Unforgettable Musical Experiences'
   },
   {
-    image: '/wedding/1000003571.jpg',
+    image: '/wedding/2115d2cb-af74-4a12-9c8a-672c32c299ef.jpeg',
     title: 'Wedding Planning',
     subtitle: 'Your Perfect Day, Our Expertise'
   },
@@ -31,27 +31,27 @@ export const heroSlides: HeroSlide[] = [
     subtitle: 'Bringing Talent to Life'
   },
   {
-    image: '/wedding/1000003590.jpg',
+    image: '/venue/The-Great-Ballroom-Banquet-Setup--Le-Meridien-Dubai-Hotel---Conference-Center.jpg',
     title: 'Venue Booking',
     subtitle: 'Perfect Locations for Every Occasion'
   },
   {
-    image: '/wedding/fashionshowhd.png',
+    image: '/fashion/fashion-hero.jpg',
     title: 'Fashion Shows',
     subtitle: 'Elegance on Display'
   },
   {
-    image: '/wedding/1000003552.jpg',
+    image: '/wedding/White-and-gold-floral-wedding-reception-decor.jpeg',
     title: 'Decor & Design',
     subtitle: 'Creating Beautiful Spaces'
   },
   {
-    image: '/liveconcert/live12.jpg',
+    image: '/EventProduction/161117_DiljitDosanjhConcert_03.jpg',
     title: 'Entertainment Solutions',
     subtitle: 'Complete Event Production'
   },
   {
-    image: '/wedding/1000003554.jpg',
+    image: '/venue/best-resorts-india-udaivilas.jpg',
     title: 'Destination Events',
     subtitle: 'Memorable Experiences Anywhere'
   }
