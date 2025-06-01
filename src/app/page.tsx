@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import ClientLogos from '@/components/ClientLogos';
+import FeaturedVideos from '@/components/FeaturedVideos';
 
 
 export default function Home() {
@@ -173,6 +174,9 @@ export default function Home() {
           <TestimonialCarousel testimonials={testimonials} autoScrollInterval={5000} />
         </div>
       </section>
+
+      {/* Featured Videos Section */}
+      <FeaturedVideos />
 
       {/* Our Clients Section */}
       <ClientLogos />
