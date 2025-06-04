@@ -28,7 +28,7 @@ export const featuredVideos: Video[] = [
   {
     id: 'uWuzMPspeQg', // Using same ID as placeholder, replace with actual video IDs
     title: 'Fashion Show pearl academy',
-    description: 'Fashion week production & management'
+    description: 'Fashion show production & management'
   },
   {
     id: '3SJGaW985sQ', // Using same ID as placeholder, replace with actual video IDs

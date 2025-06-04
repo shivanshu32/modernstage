@@ -31,7 +31,7 @@ export const heroSlides: HeroSlide[] = [
     subtitle: 'Bringing Talent to Life'
   },
   {
-    image: '/venue/The-Great-Ballroom-Banquet-Setup--Le-Meridien-Dubai-Hotel---Conference-Center.jpg',
+    image: '/sarmad-siddiqi-oGdnQKPDmCE-unsplash.jpg',
     title: 'Venue Booking',
     subtitle: 'Perfect Locations for Every Occasion'
   },

@@ -38,34 +38,149 @@ export default function LiveConcerts() {
         </div>
       </section>
 
-      {/* Services Overview */}
+      {/* Core Services */}
       <section className="py-20 bg-theme-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            <span className="text-gradient">Our Concert Services</span>
-          </h2>
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="text-gradient">Our Core Concert Services</span>
+            </h2>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto">
+              Modern Stage Events delivers comprehensive live concert solutions through our three specialized service areas.
+            </p>
+          </motion.div>
+          
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {concertServices.map((service, index) => (
-              <motion.div
-                key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-gray-900 rounded-lg p-6 hover:bg-gray-800 transition-colors"
-              >
-                <div className="text-4xl mb-4">{service.icon}</div>
-                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                <p className="text-gray-400 mb-6">{service.description}</p>
+            {/* Production */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="bg-dark-800 rounded-lg overflow-hidden border border-dark-700"
+            >
+              <div className="h-48 relative">
+                <Image 
+                  src="/liveconcert/live6.jpg" 
+                  alt="Concert Production" 
+                  fill 
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-4 text-gradient">Production</h3>
                 <ul className="space-y-2">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-center text-gray-300">
-                      <span className="text-yellow-400 mr-2">✓</span>
-                      {feature}
-                    </li>
-                  ))}
+                  <li className="flex items-start">
+                    <span className="text-primary-500 mr-2 mt-1">•</span>
+                    <span className="text-gray-300">Stage Design & Construction</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-500 mr-2 mt-1">•</span>
+                    <span className="text-gray-300">Professional Sound Systems</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-500 mr-2 mt-1">•</span>
+                    <span className="text-gray-300">Concert Lighting & Effects</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-500 mr-2 mt-1">•</span>
+                    <span className="text-gray-300">Video Production & LED Screens</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-500 mr-2 mt-1">•</span>
+                    <span className="text-gray-300">Technical Crew Management</span>
+                  </li>
                 </ul>
-              </motion.div>
-            ))}
+              </div>
+            </motion.div>
+            
+            {/* Artist Management */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="bg-dark-800 rounded-lg overflow-hidden border border-dark-700"
+            >
+              <div className="h-48 relative">
+                <Image 
+                  src="/EventProduction/161117_DiljitDosanjhConcert_03.jpg" 
+                  alt="Artist Management" 
+                  fill 
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-4 text-gradient">Artist Management</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <span className="text-primary-500 mr-2 mt-1">•</span>
+                    <span className="text-gray-300">Artist Booking & Coordination</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-500 mr-2 mt-1">•</span>
+                    <span className="text-gray-300">Contract Negotiation</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-500 mr-2 mt-1">•</span>
+                    <span className="text-gray-300">Travel & Accommodation</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-500 mr-2 mt-1">•</span>
+                    <span className="text-gray-300">Rider Fulfillment</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-500 mr-2 mt-1">•</span>
+                    <span className="text-gray-300">On-site Artist Support</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
+            
+            {/* Licenses & Permissions */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="bg-dark-800 rounded-lg overflow-hidden border border-dark-700"
+            >
+              <div className="h-48 relative">
+                <Image 
+                  src="/liveconcert/livehero.jpg" 
+                  alt="Licenses & Permissions" 
+                  fill 
+                  className="object-cover"
+                />
+              </div>
+              <div className="p-6">
+                <h3 className="text-2xl font-semibold mb-4 text-gradient">Licenses & Permissions</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start">
+                    <span className="text-primary-500 mr-2 mt-1">•</span>
+                    <span className="text-gray-300">Event Permits & Approvals</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-500 mr-2 mt-1">•</span>
+                    <span className="text-gray-300">Music Licensing (IPRS/PPL)</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-500 mr-2 mt-1">•</span>
+                    <span className="text-gray-300">Safety & Security Clearances</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-500 mr-2 mt-1">•</span>
+                    <span className="text-gray-300">Venue Compliance Management</span>
+                  </li>
+                  <li className="flex items-start">
+                    <span className="text-primary-500 mr-2 mt-1">•</span>
+                    <span className="text-gray-300">Insurance & Liability Coverage</span>
+                  </li>
+                </ul>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

@@ -94,7 +94,7 @@ export default function Home() {
                     src={service.image}
                     alt={service.title}
                     fill
-                    className={`transition-transform duration-500 group-hover:scale-110 object-cover ${service.title === 'Fashion Weeks' ? 'object-[center_25%]' : ''}`}
+                    className={`transition-transform duration-500 group-hover:scale-110 object-cover ${service.title === 'Fashion Shows' ? 'object-[center_25%]' : ''}`}
                   />
                 </div>
                 <div className="p-6">
@@ -166,7 +166,7 @@ const services = [
   {
     title: 'Wedding Planning',
     description: 'Create your perfect wedding day with our comprehensive planning services.',
-    image: '/wedding/8b9fb8dd-bc9e-4902-b6c1-5ab8c4676cbb.jpeg',
+    image: '/abby-savage-zNsSwsuyP3A-unsplash.jpg',
     href: '/services/wedding',
   },
   {
@@ -188,15 +188,15 @@ const services = [
     href: '/services/artist-management',
   },
   {
-    title: 'Fashion Weeks',
+    title: 'Fashion Shows',
     description: 'Professional fashion show production and event management.',
     image: '/fashion/fashion-hero.jpg',
-    href: '/services/fashion-weeks',
+    href: '/services/fashion-shows',
   },
   {
     title: 'Venue Booking',
     description: 'Find and secure the perfect location for your special event.',
-    image: '/venue/best-resorts-india-udaivilas.jpg',
+    image: '/sarmad-siddiqi-oGdnQKPDmCE-unsplash.jpg',
     href: '/services/venue-booking',
   },
 ];

@@ -11,7 +11,7 @@ export default function VenueBooking() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/venue/2Jodhpur Holidays 2.jpg"
+            src="/sarmad-siddiqi-oGdnQKPDmCE-unsplash.jpg"
             alt="Venue Booking"
             fill
             className="object-cover brightness-50"
@@ -38,6 +38,45 @@ export default function VenueBooking() {
         </div>
       </section>
 
+      {/* Introduction */}
+      <section className="py-20 bg-gray-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-6">
+                <span className="text-gradient">Venue Booking: Setting the Stage for Unforgettable Moments</span>
+              </h2>
+              <p className="text-gray-300 mb-6">
+                At Modern Stage Events, we understand that the venue is more than just a location; it's the canvas upon which your event's story unfolds. That's why we offer unparalleled venue booking services, connecting you with the most exceptional settings to perfectly match your vision.
+              </p>
+              <h3 className="text-2xl font-semibold mb-4">
+                <span className="text-gradient">Exquisite Venues, Globally Sourced</span>
+              </h3>
+              <p className="text-gray-300">
+                Whether you envision the opulent elegance of a luxury 5-star hotel, the traditional grandeur of a prestigious pandal venue, or the serene beauty of a luxury 5-star resort, we have access to a curated portfolio of stunning locations. Our expertise extends globally, allowing us to source the ideal venue for your event, no matter where in the world your dreams take you.
+              </p>
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="relative h-[400px] rounded-lg overflow-hidden"
+            >
+              <Image
+                src="/guille-b-yj0JchVIYh8-unsplash.jpg"
+                alt="Exquisite Venues"
+                fill
+                className="object-cover"
+              />
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Services Overview */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,7 +92,6 @@ export default function VenueBooking() {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="bg-gray-900 rounded-lg p-6 hover:bg-gray-800 transition-colors"
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
                 <p className="text-gray-400 mb-6">{service.description}</p>
                 <ul className="space-y-2">

@@ -19,7 +19,7 @@ const navLinks = [
       { name: 'Corporate Events', href: '/services/corporate' },
       { name: 'Live Concerts', href: '/services/concerts' },
       { name: 'Artist Management', href: '/services/artist-management' },
-      { name: 'Fashion Weeks', href: '/services/fashion-weeks' },
+      { name: 'Fashion Shows', href: '/services/fashion-shows' },
       { name: 'Venue Booking', href: '/services/venue-booking' },
     ],
   },
@@ -172,13 +172,23 @@ export default function Navbar() {
               <div key={link.name}>
                 {link.submenu ? (
                   <>
-                    <button
-                      onClick={() => setActiveDropdown(activeDropdown === link.name ? null : link.name)}
-                      className="w-full text-left text-gray-300 hover:text-gray-100 block px-3 py-2 rounded-md text-base font-medium"
-                      style={{ ':hover': { color: colors.primary } } as React.CSSProperties}
-                    >
-                      {link.name}
-                    </button>
+                    <div className="flex justify-between items-center w-full">
+                      <Link
+                        href={link.href}
+                        className="flex-grow text-left text-gray-300 hover:text-gray-100 px-3 py-2 rounded-md text-base font-medium"
+                        style={{ ':hover': { color: colors.primary } } as React.CSSProperties}
+                        onClick={() => setIsOpen(false)}
+                      >
+                        {link.name}
+                      </Link>
+                      <button
+                        onClick={() => setActiveDropdown(activeDropdown === link.name ? null : link.name)}
+                        className="px-3 py-2 text-gray-300 hover:text-gray-100"
+                        style={{ ':hover': { color: colors.primary } } as React.CSSProperties}
+                      >
+                        <ChevronDownIcon className="h-5 w-5" />
+                      </button>
+                    </div>
                     {activeDropdown === link.name && (
                       <div className="pl-4 space-y-1">
                         {link.submenu.map((subItem) => (

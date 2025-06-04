@@ -43,7 +43,7 @@ export default function TermsAndConditions() {
 
               <h2 className="text-2xl font-bold mt-8 mb-6 text-yellow-400">2. Services</h2>
               <p>
-                Modern Stage Events provides event planning and management services, including but not limited to wedding planning, corporate events, live concerts, artist management, fashion weeks, and venue booking. The specific details, deliverables, and terms of each service will be outlined in a separate agreement between Modern Stage Events and the client.
+                Modern Stage Events provides event planning and management services, including but not limited to wedding planning, corporate events, live concerts, artist management, fashion shows, and venue booking. The specific details, deliverables, and terms of each service will be outlined in a separate agreement between Modern Stage Events and the client.
               </p>
 
               <h2 className="text-2xl font-bold mt-8 mb-6 text-yellow-400">3. Bookings and Payments</h2>
