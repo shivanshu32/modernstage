@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import ThemeWrapper from "@/components/ThemeWrapper";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,12 +19,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-black text-white min-h-screen`}>
-        <Navbar />
-        <main className="pt-16">
-          {children}
-        </main>
-        <Footer />
+      <body className={`${inter.className} min-h-screen`} style={{ 
+        backgroundColor: 'black', 
+        color: 'var(--color-text)'
+      }}>
+        <ThemeWrapper>
+          <Navbar />
+          <main className="pt-16">
+            {children}
+          </main>
+          <Footer />
+        </ThemeWrapper>
       </body>
     </html>
   );

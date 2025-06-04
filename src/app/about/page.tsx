@@ -10,7 +10,7 @@ export default function About() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/about-hero.jpg"
+            src="/corporate/corporate3.jpg"
             alt="About Modern Stage"
             fill
             className="object-cover brightness-50"
@@ -63,7 +63,7 @@ export default function About() {
               className="relative h-[400px] rounded-lg overflow-hidden"
             >
               <Image
-                src="/about-story.jpg"
+                src="/liveconcert/live12.jpg"
                 alt="Our Story"
                 fill
                 className="object-cover"

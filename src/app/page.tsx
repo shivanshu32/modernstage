@@ -19,7 +19,7 @@ export default function Home() {
       <HeroCarousel slides={heroSlides} autoScrollInterval={5000} />
 
       {/* About Us / Our Story Section */}
-      <section className="py-20 bg-luxury-800">
+      <section className="py-20 bg-theme-background">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
             <span className="text-gradient">Creating Moments That Matter</span>
@@ -87,14 +87,14 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
-                  className="bg-luxury-700 rounded-lg overflow-hidden hover:bg-luxury-600 transition-colors h-full"
+                  className="bg-dark-800 rounded-lg overflow-hidden hover:bg-dark-700 transition-colors h-full border border-luxury-600"
                 >
                 <div className="relative h-48">
                   <Image
                     src={service.image}
                     alt={service.title}
                     fill
-                    className="object-cover transition-transform duration-500 group-hover:scale-110"
+                    className={`transition-transform duration-500 group-hover:scale-110 object-cover ${service.title === 'Fashion Weeks' ? 'object-[center_25%]' : ''}`}
                   />
                 </div>
                 <div className="p-6">
@@ -144,7 +144,7 @@ export default function Home() {
       <ClientLogos />
 
       {/* Gallery Section */}
-      <section className="py-20 bg-luxury-800">
+      <section className="py-20 bg-theme-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Gallery 
             images={homeGalleryPreview} 
@@ -172,7 +172,7 @@ const services = [
   {
     title: 'Corporate Events',
     description: 'Professional event management for corporate gatherings and conferences.',
-    image: '/corporate-service.jpg',
+    image: '/venue/The-Great-Ballroom-Banquet-Setup--Le-Meridien-Dubai-Hotel---Conference-Center.jpg',
     href: '/services/corporate',
   },
   {
@@ -190,13 +190,13 @@ const services = [
   {
     title: 'Fashion Weeks',
     description: 'Professional fashion show production and event management.',
-    image: '/wedding/fashionshowhd.png',
+    image: '/fashion/fashion-hero.jpg',
     href: '/services/fashion-weeks',
   },
   {
     title: 'Venue Booking',
     description: 'Find and secure the perfect location for your special event.',
-    image: '/wedding/1000003590.jpg',
+    image: '/venue/best-resorts-india-udaivilas.jpg',
     href: '/services/venue-booking',
   },
 ];

@@ -6,6 +6,12 @@
   --foreground-rgb: 255, 255, 255;
   --background-start-rgb: 0, 0, 0;
   --background-end-rgb: 0, 0, 0;
+  
+  /* Theme color variables with defaults */
+  --color-primary: #e6b300;
+  --color-secondary: #006ce6;
+  --color-text: #ffffff;
+  --color-background: #14142b;
 }
 
 body {
@@ -56,7 +62,38 @@ html {
 
 /* Custom utility classes */
 .text-gradient {
-  @apply bg-gradient-to-r from-primary-400 to-primary-600 bg-clip-text text-transparent;
+  background-image: linear-gradient(to right, var(--color-primary), var(--color-primary));
+  background-clip: text;
+  color: transparent;
+}
+
+/* Theme color utility classes */
+.text-theme-primary {
+  color: var(--color-primary);
+}
+
+.text-theme-secondary {
+  color: var(--color-secondary);
+}
+
+.bg-theme-primary {
+  background-color: var(--color-primary);
+}
+
+.bg-theme-secondary {
+  background-color: var(--color-secondary);
+}
+
+.border-theme-primary {
+  border-color: var(--color-primary);
+}
+
+.border-theme-secondary {
+  border-color: var(--color-secondary);
+}
+
+.bg-theme-background {
+  background-color: var(--color-background);
 }
 
 .hover-scale {

@@ -51,7 +51,7 @@ export default function ArtistManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-luxury-700 rounded-lg p-6 hover:bg-luxury-600 transition-colors"
+                className="bg-dark-800 rounded-lg p-6 hover:bg-dark-700 transition-colors border border-luxury-600"
               >
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
@@ -71,7 +71,7 @@ export default function ArtistManagement() {
       </section>
 
       {/* Our Approach */}
-      <section className="py-20 bg-luxury-800">
+      <section className="py-20 bg-theme-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             <span className="text-gradient">Our Approach</span>
@@ -98,7 +98,7 @@ export default function ArtistManagement() {
       <div className="py-10 bg-luxury-900"></div>
 
       {/* CTA */}
-      <section className="py-20 bg-luxury-800">
+      <section className="py-20 bg-theme-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
             <span className="text-gradient">Ready to Work with Professional Artists?</span>
