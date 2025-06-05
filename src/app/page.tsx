@@ -51,11 +51,11 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="rounded-lg p-8 text-center transition-all hover:transform hover:scale-105 border border-dark-600"
                 style={{ 
-                  backgroundColor: colors.background,
+                  backgroundColor: '#110606',
                   transition: 'background-color 0.3s ease'
                 }}
                 whileHover={{
-                  backgroundColor: `${colors.background}dd`, // Adding transparency for hover effect
+                  backgroundColor: '#1a0a0a', // Slightly lighter version of #110606 for hover
                   boxShadow: `0 4px 12px rgba(0, 0, 0, 0.2), 0 0 0 1px ${colors.primary}33`
                 }}
               >
@@ -80,7 +80,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-luxury-900">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             <span className="text-gradient">Our Services</span>
