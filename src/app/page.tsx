@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
+import { useTheme } from '@/context/ThemeContext';
 import TestimonialCarousel from '@/components/TestimonialCarousel';
 import ClientLogos from '@/components/ClientLogos';
 import FeaturedVideos from '@/components/FeaturedVideos';
@@ -13,6 +14,7 @@ import { homeGalleryPreview } from '@/data/galleryImages';
 
 
 export default function Home() {
+  const { colors } = useTheme();
   return (
     <div className="min-h-screen">
       {/* Hero Carousel Section */}
@@ -47,7 +49,15 @@ export default function Home() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-dark-800 rounded-lg p-8 text-center hover:bg-dark-700 transition-all hover:transform hover:scale-105 border border-dark-600"
+                className="rounded-lg p-8 text-center transition-all hover:transform hover:scale-105 border border-dark-600"
+                style={{ 
+                  backgroundColor: colors.background,
+                  transition: 'background-color 0.3s ease'
+                }}
+                whileHover={{
+                  backgroundColor: `${colors.background}dd`, // Adding transparency for hover effect
+                  boxShadow: `0 4px 12px rgba(0, 0, 0, 0.2), 0 0 0 1px ${colors.primary}33`
+                }}
               >
                 <motion.div 
                   className="text-4xl md:text-5xl font-bold mb-2 text-primary-500"
