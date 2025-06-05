@@ -25,7 +25,7 @@ export default function ArtistManagement() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl font-bold mb-6"
           >
-            <span className="text-gradient">Artist Management</span>
+            <span className="text-gradient">Artist Booking Services</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export default function ArtistManagement() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-gray-200 max-w-2xl mx-auto"
           >
-            Nurturing talent and building successful careers
+            Connecting you with the perfect talent for your event
           </motion.p>
         </div>
       </section>
@@ -42,7 +42,7 @@ export default function ArtistManagement() {
       <section className="py-20 bg-luxury-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            <span className="text-gradient">Professional artist representation and management</span>
+            <span className="text-gradient">Professional Artist Booking Services</span>
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {managementServices.map((service, index) => (
@@ -51,9 +51,9 @@ export default function ArtistManagement() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-dark-800 rounded-lg p-6 hover:bg-dark-700 transition-colors border border-luxury-600"
+                className="rounded-lg p-6 transition-colors border border-luxury-600 hover:brightness-125"
+                style={{ backgroundColor: '#110606' }}
               >
-                <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
                 <p className="text-gray-400 mb-6">{service.description}</p>
                 <ul className="space-y-2">
@@ -71,7 +71,7 @@ export default function ArtistManagement() {
       </section>
 
       {/* Our Approach */}
-      <section className="py-20 bg-theme-background">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             <span className="text-gradient">Our Approach</span>
@@ -85,7 +85,6 @@ export default function ArtistManagement() {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 className="text-center"
               >
-                <div className="text-4xl mb-4">{item.icon}</div>
                 <h3 className="text-xl font-semibold mb-4">{item.title}</h3>
                 <p className="text-gray-400">{item.description}</p>
               </motion.div>
@@ -95,16 +94,16 @@ export default function ArtistManagement() {
       </section>
 
       {/* Spacer section to maintain layout rhythm */}
-      <div className="py-10 bg-luxury-900"></div>
+      <div className="py-10 bg-black"></div>
 
       {/* CTA */}
-      <section className="py-20 bg-theme-background">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
-            <span className="text-gradient">Ready to Work with Professional Artists?</span>
+            <span className="text-gradient">Ready to Book the Perfect Artist for Your Event?</span>
           </h2>
           <p className="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Let us connect you with the perfect talent for your next event.
+            Let us handle the talent sourcing and management so you can focus on your event.
           </p>
           <Link
             href="/contact"
@@ -120,62 +119,62 @@ export default function ArtistManagement() {
 
 const managementServices = [
   {
-    title: 'Booking & Representation',
-    description: 'Professional representation and booking services for artists.',
+    title: 'Artist Selection',
+    description: 'Curated talent matching for your specific event needs.',
     icon: '🎭',
     features: [
-      'Event bookings',
-      'Performance scheduling',
-      'Venue negotiations',
-      'Tour coordination',
-      'Festival placements',
+      'Personalized artist recommendations',
+      'Genre-specific talent sourcing',
+      'Budget-aligned options',
+      'Celebrity artist access',
+      'Emerging talent discovery',
     ],
   },
   {
-    title: 'Business Management',
-    description: 'Comprehensive business and financial management.',
-    icon: '💼',
+    title: 'Booking & Coordination',
+    description: 'Seamless booking process and event day management.',
+    icon: '📅',
     features: [
-      'Contract negotiation',
-      'Financial planning',
-      'Revenue management',
-      'Legal representation',
-      'Business development',
+      'Contract handling',
+      'Schedule coordination',
+      'Technical requirements management',
+      'Travel & accommodation arrangements',
+      'On-site artist liaison',
     ],
   },
   {
-    title: 'Creative Development',
-    description: 'Supporting artistic growth and creative projects.',
-    icon: '🎨',
+    title: 'Event Integration',
+    description: 'Ensuring artists complement your event perfectly.',
+    icon: '🎪',
     features: [
-      'Creative direction',
-      'Project management',
-      'Studio coordination',
-      'Content creation',
-      'Artistic collaboration',
+      'Performance customization',
+      'Set list collaboration',
+      'Stage & equipment coordination',
+      'Seamless event flow planning',
+      'Special moment choreography',
     ],
   },
 ];
 
 const approach = [
   {
-    title: 'Personalized Strategy',
-    description: 'Custom career development plans for each artist.',
+    title: 'Understand Your Vision',
+    description: 'We take time to understand your event goals and audience.',
     icon: '🎯',
   },
   {
-    title: 'Industry Network',
-    description: 'Strong connections with industry professionals.',
+    title: 'Extensive Artist Network',
+    description: 'Access to a diverse portfolio of professional performers.',
     icon: '🤝',
   },
   {
-    title: 'Creative Freedom',
-    description: 'Supporting artistic vision and creative expression.',
+    title: 'Perfect Matching',
+    description: 'Connecting you with artists that align with your event theme.',
     icon: '✨',
   },
   {
-    title: 'Long-term Growth',
-    description: 'Focus on sustainable career development.',
+    title: 'Seamless Experience',
+    description: 'End-to-end management of all artist-related logistics.',
     icon: '🌱',
   },
 ];

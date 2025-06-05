@@ -123,7 +123,8 @@ export default function TestimonialCarousel({
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: idx * 0.1 }}
-                  className="bg-gray-900 rounded-lg p-8 shadow-lg flex flex-col h-full border-l-4 border-yellow-500"
+                  className="rounded-lg p-8 shadow-lg flex flex-col h-full border-l-4 border-yellow-500"
+                  style={{ backgroundColor: '#110606' }}
                 >
                   <div className="text-yellow-500 text-4xl mb-4 text-left">"</div>
                   <p className="text-lg text-gray-200 mb-6 italic flex-grow text-left">{testimonial.quote}</p>

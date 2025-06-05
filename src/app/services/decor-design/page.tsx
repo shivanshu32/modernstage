@@ -51,7 +51,9 @@ export default function DecorDesign() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-gray-900 rounded-lg p-6 hover:bg-gray-800 transition-colors"
+                className="rounded-lg p-6 transition-colors"
+                style={{ backgroundColor: '#110606' }}
+                whileHover={{ backgroundColor: '#1a0a0a' }}
               >
                 <div className="text-4xl mb-4">{service.icon}</div>
                 <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
@@ -71,7 +73,7 @@ export default function DecorDesign() {
       </section>
 
       {/* Design Elements */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             <span className="text-gradient">Design Elements</span>
@@ -130,7 +132,7 @@ export default function DecorDesign() {
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
             <span className="text-gradient">Ready to Transform Your Space?</span>

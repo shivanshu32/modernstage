@@ -97,7 +97,8 @@ export default function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.2 }}
-                  className="bg-dark-800 rounded-lg overflow-hidden hover:bg-dark-700 transition-colors h-full border border-luxury-600"
+                  className="rounded-lg overflow-hidden transition-colors h-full border border-luxury-600 hover:brightness-125"
+                  style={{ backgroundColor: '#110606' }}
                 >
                 <div className="relative h-48">
                   <Image
@@ -154,7 +155,7 @@ export default function Home() {
       <ClientLogos />
 
       {/* Gallery Section */}
-      <section className="py-20 bg-theme-background">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <Gallery 
             images={homeGalleryPreview} 

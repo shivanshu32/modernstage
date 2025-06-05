@@ -34,7 +34,7 @@ export default function TermsAndConditions() {
       {/* Terms Content */}
       <section className="py-16 bg-black">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gray-900 rounded-lg p-8 shadow-lg">
+          <div className="rounded-lg p-8 shadow-lg" style={{ backgroundColor: '#110606' }}>
             <div className="prose prose-lg prose-invert max-w-none">
               <h2 className="text-2xl font-bold mb-6 text-yellow-400">1. Introduction</h2>
               <p>

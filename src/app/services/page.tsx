@@ -48,7 +48,8 @@ export default function Services() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-gray-900 rounded-lg overflow-hidden hover-scale"
+                className="rounded-lg overflow-hidden hover-scale"
+                style={{ backgroundColor: '#110606' }}
               >
                 <div className="relative h-64">
                   <Image

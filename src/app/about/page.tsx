@@ -82,7 +82,8 @@ export default function About() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-gray-900 rounded-lg p-6 text-center"
+                className="rounded-lg p-6 text-center"
+                style={{ backgroundColor: '#110606' }}
               >
                 <h3 className="text-xl font-semibold mb-4">{value.title}</h3>
                 <p className="text-gray-400">{value.description}</p>
@@ -93,7 +94,7 @@ export default function About() {
       </section>
 
       {/* Our Portfolio */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -135,7 +136,8 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-gray-900 p-8 rounded-lg h-full"
+              className="p-8 rounded-lg h-full"
+              style={{ backgroundColor: '#110606' }}
             >
               <h2 className="text-2xl md:text-3xl font-bold mb-6">
                 <span className="text-gradient">Our Mission</span>
@@ -153,7 +155,8 @@ export default function About() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-gray-900 p-8 rounded-lg h-full"
+              className="p-8 rounded-lg h-full"
+              style={{ backgroundColor: '#110606' }}
             >
               <h2 className="text-2xl md:text-3xl font-bold mb-6">
                 <span className="text-gradient">Our Vision</span>

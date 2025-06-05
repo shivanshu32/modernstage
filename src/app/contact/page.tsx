@@ -111,7 +111,8 @@ export default function Contact() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-gray-900 rounded-lg p-8"
+              className="rounded-lg p-8"
+              style={{ backgroundColor: '#110606' }}
             >
               <h2 className="text-2xl font-semibold mb-6">Send us a Message</h2>
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
@@ -125,7 +126,8 @@ export default function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    className="w-full px-4 py-2 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    style={{ backgroundColor: '#110606' }}
                     required
                   />
                 </div>
@@ -139,7 +141,8 @@ export default function Contact() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    className="w-full px-4 py-2 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    style={{ backgroundColor: '#110606' }}
                     required
                   />
                 </div>
@@ -153,7 +156,8 @@ export default function Contact() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    className="w-full px-4 py-2 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    style={{ backgroundColor: '#110606' }}
                   />
                 </div>
                 <div>
@@ -165,7 +169,8 @@ export default function Contact() {
                     name="eventType"
                     value={formData.eventType}
                     onChange={handleChange}
-                    className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    className="w-full px-4 py-2 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    style={{ backgroundColor: '#110606' }}
                     required
                   >
                     <option value="">Select an event type</option>
@@ -185,7 +190,8 @@ export default function Contact() {
                     value={formData.message}
                     onChange={handleChange}
                     rows={4}
-                    className="w-full px-4 py-2 bg-gray-800 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    className="w-full px-4 py-2 border border-gray-700 rounded-md text-white focus:outline-none focus:ring-2 focus:ring-yellow-500"
+                    style={{ backgroundColor: '#110606' }}
                     required
                   ></textarea>
                 </div>
@@ -252,7 +258,8 @@ export default function Contact() {
                     href="https://www.facebook.com/ModernStageEvent"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors"
+                    className="text-white p-3 rounded-full transition-colors hover:brightness-125"
+                    style={{ backgroundColor: '#110606' }}
                   >
                     <FaFacebook className="h-6 w-6" />
                   </a>
@@ -260,7 +267,8 @@ export default function Contact() {
                     href="https://instagram.com/modernstageevents"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors"
+                    className="text-white p-3 rounded-full transition-colors hover:brightness-125"
+                    style={{ backgroundColor: '#110606' }}
                   >
                     <FaInstagram className="h-6 w-6" />
                   </a>
@@ -268,7 +276,8 @@ export default function Contact() {
                     href="https://youtube.com/@modernstageevents2889?si=F3qqr8sCBEyaWQb-"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors"
+                    className="text-white p-3 rounded-full transition-colors hover:brightness-125"
+                    style={{ backgroundColor: '#110606' }}
                   >
                     <FaYoutube className="h-6 w-6" />
                   </a>
@@ -276,7 +285,8 @@ export default function Contact() {
                     href="https://pin.it/7z79m3546"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors"
+                    className="text-white p-3 rounded-full transition-colors hover:brightness-125"
+                    style={{ backgroundColor: '#110606' }}
                   >
                     <FaPinterest className="h-6 w-6" />
                   </a>
@@ -284,7 +294,8 @@ export default function Contact() {
                     href="https://www.linkedin.com/company/modern-stage-events/?lipi=urn%3Ali%3Apage%3Ad_flagship3_search_srp_all%3BnG1Xg0M%2BR4eeMNqMHPt%2B3A%3D%3D"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-gray-800 hover:bg-gray-700 text-white p-3 rounded-full transition-colors"
+                    className="text-white p-3 rounded-full transition-colors hover:brightness-125"
+                    style={{ backgroundColor: '#110606' }}
                   >
                     <FaLinkedin className="h-6 w-6" />
                   </a>

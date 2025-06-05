@@ -88,7 +88,7 @@ export default function Navbar() {
                         <ChevronDownIcon className="h-4 w-4 ml-1" />
                       </button>
                       <div 
-                        className={`absolute left-0 mt-2 w-48 rounded-md shadow-lg bg-theme-background/95 backdrop-blur-sm ring-1 ring-dark-800 ring-opacity-5 ${
+                        className={`absolute left-0 mt-0 w-48 rounded-md shadow-lg bg-theme-background/95 backdrop-blur-sm ring-1 ring-dark-800 ring-opacity-5 ${
                           activeDropdown === link.name ? 'block' : 'hidden'
                         }`}
                       >

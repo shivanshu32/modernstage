@@ -39,7 +39,7 @@ export default function VenueBooking() {
       </section>
 
       {/* Introduction */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <motion.div
@@ -90,7 +90,9 @@ export default function VenueBooking() {
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-gray-900 rounded-lg p-6 hover:bg-gray-800 transition-colors"
+                className="rounded-lg p-6 transition-colors"
+                style={{ backgroundColor: '#110606' }}
+                whileHover={{ backgroundColor: '#1a0a0a' }}
               >
                 <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
                 <p className="text-gray-400 mb-6">{service.description}</p>
@@ -109,7 +111,7 @@ export default function VenueBooking() {
       </section>
 
       {/* Venue Types */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             <span className="text-gradient">Venue Types</span>
@@ -136,7 +138,7 @@ export default function VenueBooking() {
       <div className="py-10 bg-black"></div>
 
       {/* CTA */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
             <span className="text-gradient">Ready to Find Your Perfect Venue?</span>

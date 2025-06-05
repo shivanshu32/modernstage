@@ -38,87 +38,6 @@ export default function CorporateEvents() {
         </div>
       </section>
 
-      {/* Introduction Section */}
-      <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-3xl md:text-4xl font-bold mb-6">
-              <span className="text-gradient">Corporate Events: Elevating Your Business Gatherings</span>
-            </h2>
-            <p className="text-lg text-gray-300 max-w-4xl mx-auto">
-              At Modern Stage Events, we understand that corporate gatherings are more than just meetings—they're opportunities to build connections, share visions, and celebrate achievements. We specialize in transforming your corporate objectives into meticulously planned and flawlessly executed events.
-            </p>
-          </motion.div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
-              className="bg-dark-800 rounded-lg p-8 border border-dark-700"
-            >
-              <h3 className="text-2xl font-semibold mb-4 text-gradient">Seamless Corporate Productions</h3>
-              <p className="text-gray-300 mb-4">
-                From annual days that celebrate team milestones to strategic town halls and expansive multi-national conventions at international venues, we provide comprehensive logistical and hospitality support. Our expertise ensures every detail, from delegate registration to sophisticated A/V setups, is managed with precision, creating a professional and impactful environment for your corporate meet-ups.
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="bg-dark-800 rounded-lg p-8 border border-dark-700"
-            >
-              <h3 className="text-2xl font-semibold mb-4 text-gradient">Engaging Dealer & Distributor Meets</h3>
-              <p className="text-gray-300 mb-4">
-                Foster stronger relationships and inspire your network with our expertly managed dealer meets. Our specialized team handles every aspect, including seamless travel and accommodation arrangements, engaging event programming, and the smooth distribution of rewards. Whether you're planning a regional gathering or an international summit, we have the experience to scale your event to perfection.
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="bg-dark-800 rounded-lg p-8 border border-dark-700"
-            >
-              <h3 className="text-2xl font-semibold mb-4 text-gradient">Impactful Conferences & Summits</h3>
-              <p className="text-gray-300 mb-4">
-                Host a memorable and productive conference with Modern Stage Events. We take care of the entire process, from designing and distributing invitations to securing the ideal venue, coordinating all travel logistics, and expertly hosting your corporate event. Our services are designed to ensure your message is delivered clearly and your attendees have a superior experience.
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="bg-dark-800 rounded-lg p-8 border border-dark-700"
-            >
-              <h3 className="text-2xl font-semibold mb-4 text-gradient">Unforgettable Annual Day Celebrations</h3>
-              <p className="text-gray-300 mb-4">
-                Make your school or organization's annual day truly special. We meticulously plan and execute the entire event, managing everything from eye-catching invitations and the perfect venue to delightful food arrangements, engaging activities, and securing top-tier artists and acts to entertain throughout the program. We ensure a day of celebration that everyone will remember.
-              </p>
-            </motion.div>
-            
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.5 }}
-              className="bg-dark-800 rounded-lg p-8 border border-dark-700 md:col-span-2"
-            >
-              <h3 className="text-2xl font-semibold mb-4 text-gradient">Beyond the Boardroom: Out-of-Station Events</h3>
-              <p className="text-gray-300 mb-4">
-                When your corporate event calls for a change of scenery, our experts step in. We meticulously plan, organize, and schedule all aspects of out-of-station events, whether it's a short team-building picnic or an elaborate corporate vacation. From travel and accommodation to curated activities, our dedicated team handles every particular to ensure a smooth and refreshing experience for your team.
-              </p>
-            </motion.div>
-          </div>
-        </div>
-      </section>
-      
       {/* Main Services Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -142,11 +61,12 @@ export default function CorporateEvents() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-dark-800 rounded-lg overflow-hidden border border-dark-700"
+              className="rounded-lg overflow-hidden border border-dark-700"
+              style={{ backgroundColor: '#110606' }}
             >
               <div className="h-48 relative">
                 <Image 
-                  src="/sarmad-siddiqi-oGdnQKPDmCE-unsplash.jpg" 
+                  src="/corporate/venue-booking.jpg" 
                   alt="Venue Booking" 
                   fill 
                   className="object-cover"
@@ -157,117 +77,196 @@ export default function CorporateEvents() {
                 <ul className="space-y-2">
                   <li className="flex items-start">
                     <span className="text-primary-500 mr-2 mt-1">•</span>
-                    <span className="text-gray-300">Conference Centers & Meeting Rooms</span>
+                    <span className="text-gray-300">Premium Location Selection</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary-500 mr-2 mt-1">•</span>
-                    <span className="text-gray-300">Hotel Ballrooms & Banquet Halls</span>
+                    <span className="text-gray-300">Capacity & Layout Planning</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary-500 mr-2 mt-1">•</span>
-                    <span className="text-gray-300">Unique Venues & Landmark Locations</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary-500 mr-2 mt-1">•</span>
-                    <span className="text-gray-300">International Convention Centers</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary-500 mr-2 mt-1">•</span>
-                    <span className="text-gray-300">Outdoor Event Spaces</span>
+                    <span className="text-gray-300">Venue Contract Negotiation</span>
                   </li>
                 </ul>
+                <div className="mt-6">
+                  <Link href="/services/venue-booking" className="text-yellow-400 hover:text-yellow-300 transition-colors">
+                    Learn more →
+                  </Link>
+                </div>
               </div>
             </motion.div>
-            
-            {/* Fabrications & Production */}
+
+            {/* Artist Management */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-dark-800 rounded-lg overflow-hidden border border-dark-700"
+              className="rounded-lg overflow-hidden border border-dark-700"
+              style={{ backgroundColor: '#110606' }}
             >
               <div className="h-48 relative">
                 <Image 
-                  src="/corporate/corporate-hero.jpg" 
-                  alt="Fabrications & Production" 
+                  src="/corporate/artist-management.jpg" 
+                  alt="Artist Management" 
                   fill 
                   className="object-cover"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-4 text-gradient">Fabrications & Production</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-gradient">Artist Management</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start">
                     <span className="text-primary-500 mr-2 mt-1">•</span>
-                    <span className="text-gray-300">Professional Lighting Systems</span>
+                    <span className="text-gray-300">Celebrity & Performer Booking</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary-500 mr-2 mt-1">•</span>
-                    <span className="text-gray-300">High-Quality Sound Equipment</span>
+                    <span className="text-gray-300">Contract & Rider Management</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary-500 mr-2 mt-1">•</span>
-                    <span className="text-gray-300">Custom Stage Design & Construction</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary-500 mr-2 mt-1">•</span>
-                    <span className="text-gray-300">LED Screens & Visual Displays</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary-500 mr-2 mt-1">•</span>
-                    <span className="text-gray-300">Technical Support & AV Management</span>
+                    <span className="text-gray-300">Performance Coordination</span>
                   </li>
                 </ul>
+                <div className="mt-6">
+                  <Link href="/services/artist-management" className="text-yellow-400 hover:text-yellow-300 transition-colors">
+                    Learn more →
+                  </Link>
+                </div>
               </div>
             </motion.div>
-            
-            {/* Entertainment */}
+
+            {/* Production */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-dark-800 rounded-lg overflow-hidden border border-dark-700"
+              className="rounded-lg overflow-hidden border border-dark-700"
+              style={{ backgroundColor: '#110606' }}
             >
               <div className="h-48 relative">
                 <Image 
-                  src="/liveconcert/livehero.jpg" 
-                  alt="Entertainment" 
+                  src="/corporate/production.jpg" 
+                  alt="Production Services" 
                   fill 
                   className="object-cover"
                 />
               </div>
               <div className="p-6">
-                <h3 className="text-2xl font-semibold mb-4 text-gradient">Entertainment</h3>
+                <h3 className="text-2xl font-semibold mb-4 text-gradient">Production</h3>
                 <ul className="space-y-2">
                   <li className="flex items-start">
                     <span className="text-primary-500 mr-2 mt-1">•</span>
-                    <span className="text-gray-300">Celebrity Performers & Artists</span>
+                    <span className="text-gray-300">Sound & Lighting Design</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary-500 mr-2 mt-1">•</span>
-                    <span className="text-gray-300">Live Bands & Musical Acts</span>
+                    <span className="text-gray-300">Stage & Set Construction</span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-primary-500 mr-2 mt-1">•</span>
-                    <span className="text-gray-300">Corporate Speakers & Hosts</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary-500 mr-2 mt-1">•</span>
-                    <span className="text-gray-300">Interactive Performances</span>
-                  </li>
-                  <li className="flex items-start">
-                    <span className="text-primary-500 mr-2 mt-1">•</span>
-                    <span className="text-gray-300">Team Building Activities</span>
+                    <span className="text-gray-300">Technical Direction</span>
                   </li>
                 </ul>
+                <div className="mt-6">
+                  <Link href="/services/concerts" className="text-yellow-400 hover:text-yellow-300 transition-colors">
+                    Learn more →
+                  </Link>
+                </div>
               </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Introduction Section */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="text-gradient">Corporate Events: Elevating Your Business Gatherings</span>
+            </h2>
+            <p className="text-lg text-gray-300 max-w-4xl mx-auto">
+              At Modern Stage Events, we understand that corporate gatherings are more than just meetings—they're opportunities to build connections, share visions, and celebrate achievements. We specialize in transforming your corporate objectives into meticulously planned and flawlessly executed events.
+            </p>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+              className="rounded-lg p-8 border border-dark-700"
+              style={{ backgroundColor: '#110606' }}
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-gradient">Seamless Corporate Productions</h3>
+              <p className="text-gray-300 mb-4">
+                From annual days that celebrate team milestones to strategic town halls and expansive multi-national conventions at international venues, we provide comprehensive logistical and hospitality support. Our expertise ensures every detail, from delegate registration to sophisticated A/V setups, is managed with precision, creating a professional and impactful environment for your corporate meet-ups.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="rounded-lg p-8 border border-dark-700"
+              style={{ backgroundColor: '#110606' }}
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-gradient">Engaging Dealer & Distributor Meets</h3>
+              <p className="text-gray-300 mb-4">
+                Foster stronger relationships and inspire your network with our expertly managed dealer meets. Our specialized team handles every aspect, including seamless travel and accommodation arrangements, engaging event programming, and the smooth distribution of rewards. Whether you're planning a regional gathering or an international summit, we have the experience to scale your event to perfection.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="rounded-lg p-8 border border-dark-700"
+              style={{ backgroundColor: '#110606' }}
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-gradient">Impactful Conferences & Summits</h3>
+              <p className="text-gray-300 mb-4">
+                Host a memorable and productive conference with Modern Stage Events. We take care of the entire process, from designing and distributing invitations to securing the ideal venue, coordinating all travel logistics, and expertly hosting your corporate event. Our services are designed to ensure your message is delivered clearly and your attendees have a superior experience.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="rounded-lg p-8 border border-dark-700"
+              style={{ backgroundColor: '#110606' }}
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-gradient">Unforgettable Annual Day Celebrations</h3>
+              <p className="text-gray-300 mb-4">
+                Make your school or organization's annual day truly special. We meticulously plan and execute the entire event, managing everything from eye-catching invitations and the perfect venue to delightful food arrangements, engaging activities, and securing top-tier artists and acts to entertain throughout the program. We ensure a day of celebration that everyone will remember.
+              </p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.5 }}
+              className="rounded-lg p-8 border border-dark-700 md:col-span-2"
+              style={{ backgroundColor: '#110606' }}
+            >
+              <h3 className="text-2xl font-semibold mb-4 text-gradient">Beyond the Boardroom: Out-of-Station Events</h3>
+              <p className="text-gray-300 mb-4">
+                When your corporate event calls for a change of scenery, our experts step in. We meticulously plan, organize, and schedule all aspects of out-of-station events, whether it's a short team-building picnic or an elaborate corporate vacation. From travel and accommodation to curated activities, our dedicated team handles every particular to ensure a smooth and refreshing experience for your team.
+              </p>
             </motion.div>
           </div>
         </div>
       </section>
       
       {/* Brand Solutions Section */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -288,7 +287,8 @@ export default function CorporateEvents() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5 }}
-              className="bg-dark-800 rounded-lg p-8 border border-dark-700"
+              className="rounded-lg p-8 border border-dark-700"
+              style={{ backgroundColor: '#110606' }}
             >
               <h3 className="text-xl font-semibold mb-4 text-gradient">PR Marketing: Connecting Brands & Audiences</h3>
               <p className="text-gray-300">
@@ -300,7 +300,8 @@ export default function CorporateEvents() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="bg-dark-800 rounded-lg p-8 border border-dark-700"
+              className="rounded-lg p-8 border border-dark-700"
+              style={{ backgroundColor: '#110606' }}
             >
               <h3 className="text-xl font-semibold mb-4 text-gradient">Digital Marketing: Reaching Wider Audiences</h3>
               <p className="text-gray-300">
@@ -312,7 +313,8 @@ export default function CorporateEvents() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.3 }}
-              className="bg-dark-800 rounded-lg p-8 border border-dark-700"
+              className="rounded-lg p-8 border border-dark-700"
+              style={{ backgroundColor: '#110606' }}
             >
               <h3 className="text-xl font-semibold mb-4 text-gradient">ATL Marketing: Mass Outreach</h3>
               <p className="text-gray-300">
@@ -324,7 +326,8 @@ export default function CorporateEvents() {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
-              className="bg-dark-800 rounded-lg p-8 border border-dark-700 md:col-span-3 md:grid md:grid-cols-2 md:gap-8"
+              className="rounded-lg p-8 border border-dark-700 md:col-span-3 md:grid md:grid-cols-2 md:gap-8"
+              style={{ backgroundColor: '#110606' }}
             >
               <div>
                 <h3 className="text-xl font-semibold mb-4 text-gradient">Press Conference Management: Direct Communication</h3>
@@ -345,7 +348,7 @@ export default function CorporateEvents() {
       </section>
 
       {/* Why Choose Us */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             <span className="text-gradient">Why Choose Us</span>
@@ -367,11 +370,43 @@ export default function CorporateEvents() {
         </div>
       </section>
 
-      {/* Spacer section to maintain layout rhythm */}
-      <div className="py-10 bg-black"></div>
+      {/* Featured Events */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <span className="text-gradient">Featured Corporate Events</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {featuredEvents.map((event, index) => (
+              <motion.div
+                key={event.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="relative group overflow-hidden rounded-lg"
+              >
+                <div className="relative h-80">
+                  <Image
+                    src={event.image}
+                    alt={event.title}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
+                    <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center p-4">
+                      <h3 className="text-xl font-semibold mb-2">{event.title}</h3>
+                      <p className="text-sm">{event.description}</p>
+                    </div>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gray-900">
+      <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">
             <span className="text-gradient">Ready to Elevate Your Corporate Events?</span>
@@ -450,5 +485,28 @@ const benefits = [
     title: 'Innovation',
     description: 'Creative solutions for modern corporate events.',
     icon: '💡',
+  },
+  {
+    title: 'End-to-End Solutions',
+    description: 'Complete event management from concept to execution.',
+    icon: '🔄',
+  },
+];
+
+const featuredEvents = [
+  {
+    title: 'Annual Leadership Summit',
+    description: 'A prestigious corporate leadership summit with industry experts and thought leaders.',
+    image: '/corporate/corporate1.jpg',
+  },
+  {
+    title: 'Product Launch Conference',
+    description: 'Innovative product launch event with interactive demonstrations and media coverage.',
+    image: '/corporate/corporate2.jpg',
+  },
+  {
+    title: 'Corporate Award Ceremony',
+    description: 'Elegant award ceremony recognizing excellence and achievement in business.',
+    image: '/corporate/corporate3.jpg',
   },
 ];
