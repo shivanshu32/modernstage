@@ -21,7 +21,7 @@ export default function Home() {
       <HeroCarousel slides={heroSlides} autoScrollInterval={5000} />
 
       {/* About Us / Our Story Section */}
-      <section className="py-20 bg-theme-background">
+      <section className="py-20" style={{ backgroundColor: '#120105' }}>
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-2">
             <span className="text-gradient">Creating Moments That Matter</span>

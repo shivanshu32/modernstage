@@ -10,7 +10,7 @@ export default function About() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/corporate/corporate3.jpg"
+            src="/iphone-1836071_1920.jpg"
             alt="About Modern Stage"
             fill
             className="object-cover brightness-50"
@@ -26,14 +26,7 @@ export default function About() {
           >
             <span className="text-gradient">About Us</span>
           </motion.h1>
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-gray-200 max-w-2xl mx-auto"
-          >
-            Creating extraordinary experiences since 2010
-          </motion.p>
+          {/* Hero subtitle removed as requested */}
         </div>
       </section>
 
@@ -110,7 +103,7 @@ export default function About() {
               className="order-2 md:order-1 relative h-[400px] rounded-lg overflow-hidden"
             >
               <Image
-                src="/vitor-monthay-JL2n-GWXCJo-unsplash.jpg"
+                src="/business-idea-3683781_1280.jpg"
                 alt="Our Portfolio"
                 fill
                 className="object-cover"

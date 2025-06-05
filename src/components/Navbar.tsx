@@ -73,6 +73,7 @@ export default function Navbar() {
                   key={link.name} 
                   className="relative group"
                   onMouseEnter={() => link.submenu && setActiveDropdown(link.name)}
+                  onMouseLeave={() => link.submenu && setActiveDropdown(null)}
                 >
                   {link.submenu ? (
                     <>
