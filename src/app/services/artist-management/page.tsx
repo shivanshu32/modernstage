@@ -8,7 +8,7 @@ export default function ArtistManagement() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/wedding/artistmangement.jpeg"
@@ -38,6 +38,56 @@ export default function ArtistManagement() {
         </div>
       </section>
 
+      {/* Why Choose Us */}
+      <section className="py-20 bg-luxury-900">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <span className="text-gradient">Why Choose Us</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-center"
+            >
+              <h3 className="text-xl font-semibold mb-4">Industry Connections</h3>
+              <p className="text-gray-400">Our extensive network gives you access to top-tier talent across all entertainment categories.</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-center"
+            >
+              <h3 className="text-xl font-semibold mb-4">Personalized Matching</h3>
+              <p className="text-gray-400">We carefully select artists that align perfectly with your event vision and audience preferences.</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-center"
+            >
+              <h3 className="text-xl font-semibold mb-4">Seamless Coordination</h3>
+              <p className="text-gray-400">From contracts to technical requirements, we handle all logistics for stress-free artist management.</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="text-center"
+            >
+              <h3 className="text-xl font-semibold mb-4">Performance Excellence</h3>
+              <p className="text-gray-400">We ensure every artist delivers an exceptional performance that exceeds your expectations.</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
       {/* Services Overview */}
       <section className="py-20 bg-luxury-900">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

@@ -80,7 +80,7 @@ export default function Home() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-black">
+      <section className="py-20" style={{ backgroundColor: '#120105' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             <span className="text-gradient">Our Services</span>
@@ -177,7 +177,7 @@ const services = [
   {
     title: 'Wedding Planning',
     description: 'Create your perfect wedding day with our comprehensive planning services.',
-    image: '/abby-savage-zNsSwsuyP3A-unsplash.jpg',
+    image: '/the_taj_mahal_hotel.jpg',
     href: '/services/wedding',
   },
   {

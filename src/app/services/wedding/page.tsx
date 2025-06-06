@@ -114,6 +114,56 @@ export default function WeddingPlanning() {
         </div>
       </section>
 
+      {/* Why Choose Us */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <span className="text-gradient">Why Choose Us</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-center"
+            >
+              <h3 className="text-xl font-semibold mb-4">Personalized Approach</h3>
+              <p className="text-gray-400">Every wedding we plan is uniquely tailored to reflect your personal love story and vision.</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-center"
+            >
+              <h3 className="text-xl font-semibold mb-4">Attention to Detail</h3>
+              <p className="text-gray-400">We meticulously manage every aspect of your wedding, ensuring nothing is overlooked.</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-center"
+            >
+              <h3 className="text-xl font-semibold mb-4">Vendor Relationships</h3>
+              <p className="text-gray-400">Our established connections with premium vendors ensure quality service at optimal value.</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="text-center"
+            >
+              <h3 className="text-xl font-semibold mb-4">Stress-Free Experience</h3>
+              <p className="text-gray-400">We handle the complexities so you can focus on enjoying every moment of your wedding journey.</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
       {/* Our Wedding Services */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

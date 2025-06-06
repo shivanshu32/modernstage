@@ -8,14 +8,15 @@ export default function FashionShows() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[80vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
             src="/fashion/fashion-hero.jpg"
             alt="Fashion Shows"
             fill
-            className="object-cover brightness-50"
+            className="object-cover object-top brightness-50"
             priority
+            style={{ objectPosition: '50% 20%' }}
           />
         </div>
         <div className="relative z-10 text-center px-4">
@@ -38,6 +39,56 @@ export default function FashionShows() {
         </div>
       </section>
 
+      {/* Why Choose Us */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <span className="text-gradient">Why Choose Us</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-center"
+            >
+              <h3 className="text-xl font-semibold mb-4">Industry Expertise</h3>
+              <p className="text-gray-400">Our team brings decades of fashion industry experience, ensuring your show meets the highest standards.</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="text-center"
+            >
+              <h3 className="text-xl font-semibold mb-4">Creative Excellence</h3>
+              <p className="text-gray-400">We blend artistic vision with technical precision to create unforgettable fashion experiences.</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="text-center"
+            >
+              <h3 className="text-xl font-semibold mb-4">Media Connections</h3>
+              <p className="text-gray-400">Our extensive network ensures maximum visibility and coverage for your fashion events.</p>
+            </motion.div>
+            
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 }}
+              className="text-center"
+            >
+              <h3 className="text-xl font-semibold mb-4">Flawless Execution</h3>
+              <p className="text-gray-400">From concept to runway, we handle every detail with precision and professional excellence.</p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+      
       {/* Services Overview */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

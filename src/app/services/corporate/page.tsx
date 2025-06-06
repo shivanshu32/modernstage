@@ -38,6 +38,29 @@ export default function CorporateEvents() {
         </div>
       </section>
 
+      {/* Why Choose Us */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <span className="text-gradient">Why Choose Us</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            {benefits.map((benefit, index) => (
+              <motion.div
+                key={benefit.title}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="text-center"
+              >
+                <h3 className="text-xl font-semibold mb-4">{benefit.title}</h3>
+                <p className="text-gray-400">{benefit.description}</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Main Services Section */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -66,7 +89,7 @@ export default function CorporateEvents() {
             >
               <div className="h-48 relative">
                 <Image 
-                  src="/corporate/venue-booking.jpg" 
+                  src="/the_taj_mahal_hotel.jpg" 
                   alt="Venue Booking" 
                   fill 
                   className="object-cover"
@@ -106,7 +129,7 @@ export default function CorporateEvents() {
             >
               <div className="h-48 relative">
                 <Image 
-                  src="/corporate/artist-management.jpg" 
+                  src="/liveconcert/live6.jpg" 
                   alt="Artist Management" 
                   fill 
                   className="object-cover"
@@ -146,7 +169,7 @@ export default function CorporateEvents() {
             >
               <div className="h-48 relative">
                 <Image 
-                  src="/corporate/production.jpg" 
+                  src="/EventProduction/latestbanner.jpg" 
                   alt="Production Services" 
                   fill 
                   className="object-cover"
@@ -347,29 +370,6 @@ export default function CorporateEvents() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            <span className="text-gradient">Why Choose Us</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {benefits.map((benefit, index) => (
-              <motion.div
-                key={benefit.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="text-center"
-              >
-                <h3 className="text-xl font-semibold mb-4">{benefit.title}</h3>
-                <p className="text-gray-400">{benefit.description}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* Featured Events */}
       <section className="py-20 bg-black">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -480,11 +480,6 @@ const benefits = [
     title: 'Quality Service',
     description: 'Commitment to excellence in every detail.',
     icon: '✨',
-  },
-  {
-    title: 'Innovation',
-    description: 'Creative solutions for modern corporate events.',
-    icon: '💡',
   },
   {
     title: 'End-to-End Solutions',
