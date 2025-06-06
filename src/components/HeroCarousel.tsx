@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { HeroSlide } from '@/data/heroCarousel';
+import LcpImage from './LcpImage';
 
 interface HeroCarouselProps {
   slides: HeroSlide[];
@@ -51,18 +52,26 @@ export default function HeroCarousel({
           transition={{ duration: 1 }}
           className="absolute inset-0 z-0"
         >
-          <Image
-            src={slides[currentIndex].image}
-            alt={slides[currentIndex].title}
-            fill
-            sizes="100vw"
-            quality={85}
-            fetchPriority="high"
-            priority
-            className="object-cover brightness-75"
-            placeholder="blur"
-            blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMjAxMDUiLz48L3N2Zz4="
-          />
+          {currentIndex === 0 ? (
+            // Use optimized LcpImage component for the first slide (LCP element)
+            <LcpImage
+              src={slides[currentIndex].image}
+              alt={slides[currentIndex].title}
+              className="brightness-75"
+            />
+          ) : (
+            // Use regular Image component for other slides
+            <Image
+              src={slides[currentIndex].image}
+              alt={slides[currentIndex].title}
+              fill
+              sizes="100vw"
+              quality={85}
+              className="object-cover brightness-75"
+              placeholder="blur"
+              blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMjAxMDUiLz48L3N2Zz4="
+            />
+          )}
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         </motion.div>
       </AnimatePresence>

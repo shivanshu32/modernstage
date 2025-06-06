@@ -12,6 +12,9 @@ export const metadata: Metadata = {
   description: "Premium event management services for unforgettable experiences",
 };
 
+// Performance optimizations are handled by the LcpOptimizer component
+// which is included in the homepage
+
 export default function RootLayout({
   children,
 }: {

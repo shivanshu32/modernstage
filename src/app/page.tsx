@@ -9,6 +9,7 @@ import ClientLogos from '@/components/ClientLogos';
 import FeaturedVideos from '@/components/FeaturedVideos';
 import HeroCarousel from '@/components/HeroCarousel';
 import Gallery from '@/components/Gallery';
+import LcpOptimizer from '@/components/LcpOptimizer';
 import { heroSlides } from '@/data/heroCarousel';
 import { homeGalleryPreview } from '@/data/galleryImages';
 
@@ -17,6 +18,8 @@ export default function Home() {
   const { colors } = useTheme();
   return (
     <div className="min-h-screen">
+      {/* LCP Optimizer - adds preload hints for critical resources */}
+      <LcpOptimizer />
       {/* Hero Carousel Section */}
       <HeroCarousel slides={heroSlides} autoScrollInterval={5000} />
 
