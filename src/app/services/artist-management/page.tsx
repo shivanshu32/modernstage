@@ -14,6 +14,8 @@ export default function ArtistManagement() {
             src="/wedding/artistmangement.jpeg"
             alt="Artist Management"
             fill
+            sizes="100vw"
+            quality={85}
             className="object-cover brightness-50"
             priority
           />

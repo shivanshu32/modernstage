@@ -14,6 +14,8 @@ export default function LiveConcerts() {
             src="/liveconcert/livehero.jpg"
             alt="Live Concerts"
             fill
+            sizes="100vw"
+            quality={85}
             className="object-cover brightness-50"
             priority
           />
@@ -69,6 +71,8 @@ export default function LiveConcerts() {
                   src="/liveconcert/live6.jpg" 
                   alt="Concert Production" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={80}
                   className="object-cover"
                 />
               </div>
@@ -155,6 +159,8 @@ export default function LiveConcerts() {
                   src="/liveconcert/livehero.jpg" 
                   alt="Licenses & Permissions" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={80}
                   className="object-cover"
                 />
               </div>

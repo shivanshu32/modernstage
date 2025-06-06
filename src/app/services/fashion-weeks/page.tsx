@@ -14,6 +14,8 @@ export default function FashionWeeks() {
             src="/wedding/fashionshowhd.png"
             alt="Fashion Weeks"
             fill
+            sizes="100vw"
+            quality={85}
             className="object-cover brightness-50"
             priority
           />

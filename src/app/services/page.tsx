@@ -14,6 +14,8 @@ export default function Services() {
             src="/services-hero.jpg"
             alt="Our Services"
             fill
+            sizes="100vw"
+            quality={85}
             className="object-cover brightness-50"
             priority
           />

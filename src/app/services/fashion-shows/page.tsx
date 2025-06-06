@@ -14,6 +14,8 @@ export default function FashionShows() {
             src="/fashion/fashion-hero.jpg"
             alt="Fashion Shows"
             fill
+            sizes="100vw"
+            quality={85}
             className="object-cover object-top brightness-50"
             priority
             style={{ objectPosition: '50% 20%' }}

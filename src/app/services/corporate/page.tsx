@@ -14,6 +14,8 @@ export default function CorporateEvents() {
             src="/corporate/corporate-hero.jpg"
             alt="Corporate Events"
             fill
+            sizes="100vw"
+            quality={85}
             className="object-cover brightness-50"
             priority
           />
@@ -92,6 +94,8 @@ export default function CorporateEvents() {
                   src="/the_taj_mahal_hotel.jpg" 
                   alt="Venue Booking" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={80}
                   className="object-cover"
                 />
               </div>
@@ -132,6 +136,8 @@ export default function CorporateEvents() {
                   src="/liveconcert/live6.jpg" 
                   alt="Artist Management" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={80}
                   className="object-cover"
                 />
               </div>
@@ -172,6 +178,8 @@ export default function CorporateEvents() {
                   src="/EventProduction/latestbanner.jpg" 
                   alt="Production Services" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={80}
                   className="object-cover"
                 />
               </div>
@@ -390,6 +398,8 @@ export default function CorporateEvents() {
                     src={event.image}
                     alt={event.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    quality={75}
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">

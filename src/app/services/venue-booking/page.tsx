@@ -14,6 +14,8 @@ export default function VenueBooking() {
             src="/sarmad-siddiqi-oGdnQKPDmCE-unsplash.jpg"
             alt="Venue Booking"
             fill
+            sizes="100vw"
+            quality={85}
             className="object-cover brightness-50"
             priority
           />
@@ -70,6 +72,8 @@ export default function VenueBooking() {
                 src="/guille-b-yj0JchVIYh8-unsplash.jpg"
                 alt="Exquisite Venues"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={80}
                 className="object-cover"
               />
             </motion.div>

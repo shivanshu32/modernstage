@@ -87,9 +87,11 @@ export default function WeddingPlanning() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/abby-savage-zNsSwsuyP3A-unsplash.jpg"
+            src="/the_taj_mahal_hotel.jpg"
             alt="Wedding Planning"
             fill
+            sizes="100vw"
+            quality={85}
             className="object-cover brightness-50"
             priority
           />
@@ -278,6 +280,8 @@ export default function WeddingPlanning() {
                   src="/wedding/1000003559.jpg" 
                   alt="Destination Wedding" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={80}
                   className="object-cover"
                 />
               </div>
@@ -302,6 +306,8 @@ export default function WeddingPlanning() {
                   src="/wedding/1000003571.jpg" 
                   alt="Wedding Decorations" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={80}
                   className="object-cover"
                 />
               </div>
@@ -326,6 +332,8 @@ export default function WeddingPlanning() {
                   src="/wedding/1000003576.jpg" 
                   alt="Wedding Entertainment" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={80}
                   className="object-cover"
                 />
               </div>
@@ -350,6 +358,8 @@ export default function WeddingPlanning() {
                   src="/wedding/1000003582.jpg" 
                   alt="Wedding Logistics" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={80}
                   className="object-cover"
                 />
               </div>
@@ -374,6 +384,8 @@ export default function WeddingPlanning() {
                   src="/wedding/1000003588.jpg" 
                   alt="Wedding Hospitality" 
                   fill 
+                  sizes="(max-width: 768px) 100vw, 100vw"
+                  quality={80}
                   className="object-cover"
                 />
               </div>
@@ -410,6 +422,8 @@ export default function WeddingPlanning() {
                     src={item.image}
                     alt={item.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, 33vw"
+                    quality={75}
                     className="object-cover transition-transform duration-300 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">

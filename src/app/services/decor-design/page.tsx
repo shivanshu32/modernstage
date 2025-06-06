@@ -14,6 +14,8 @@ export default function DecorDesign() {
             src="/decor-hero.jpg"
             alt="Decor & Design"
             fill
+            sizes="100vw"
+            quality={85}
             className="object-cover brightness-50"
             priority
           />
