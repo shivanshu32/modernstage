@@ -1,21 +1,10 @@
 'use client';
 
-import { useState } from 'react';
-import YouTube from 'react-youtube';
 import { motion } from 'framer-motion';
 import { featuredVideos } from '@/data/videos';
+import YouTubeFacade from './YouTubeFacade';
 
 export default function FeaturedVideos() {
-  // YouTube player options
-  const opts = {
-    height: '100%',
-    width: '100%',
-    playerVars: {
-      autoplay: 0,
-      modestbranding: 1,
-      rel: 0,
-    },
-  };
 
   return (
     <section className="py-20 bg-black">
@@ -35,12 +24,11 @@ export default function FeaturedVideos() {
               viewport={{ once: true }}
               className="flex flex-col h-full"
             >
-              {/* Video Player */}
-              <div className="rounded-xl overflow-hidden shadow-xl mb-4 aspect-video">
-                <YouTube 
+              {/* Video Player with Facade */}
+              <div className="rounded-xl overflow-hidden shadow-xl mb-4">
+                <YouTubeFacade 
                   videoId={video.id} 
-                  opts={opts} 
-                  className="w-full h-full"
+                  title={video.title}
                 />
               </div>
               
