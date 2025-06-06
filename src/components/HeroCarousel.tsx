@@ -55,8 +55,13 @@ export default function HeroCarousel({
             src={slides[currentIndex].image}
             alt={slides[currentIndex].title}
             fill
-            className="object-cover brightness-75"
+            sizes="100vw"
+            quality={85}
+            fetchPriority="high"
             priority
+            className="object-cover brightness-75"
+            placeholder="blur"
+            blurDataURL="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiMxMjAxMDUiLz48L3N2Zz4="
           />
           <div className="absolute inset-0 bg-black bg-opacity-40"></div>
         </motion.div>

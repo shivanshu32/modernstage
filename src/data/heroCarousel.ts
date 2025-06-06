@@ -4,6 +4,16 @@ export interface HeroSlide {
   subtitle: string;
 }
 
+// Add preload hint in the document head for the first slide (LCP image)
+if (typeof document !== 'undefined') {
+  const preloadLink = document.createElement('link');
+  preloadLink.rel = 'preload';
+  preloadLink.as = 'image';
+  preloadLink.href = '/venue/World-India-Luxury-hotels-in-Goa-Wallpapers.jpg';
+  preloadLink.fetchPriority = 'high';
+  document.head.appendChild(preloadLink);
+}
+
 export const heroSlides: HeroSlide[] = [
   {
     image: '/venue/World-India-Luxury-hotels-in-Goa-Wallpapers.jpg',
