@@ -56,7 +56,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="fixed w-full z-50 transition-all duration-300 bg-luxury-900/30 backdrop-blur-sm">
+    <nav className="fixed w-full z-50 transition-all duration-300 bg-black/30 backdrop-blur-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center group">
@@ -168,7 +168,7 @@ export default function Navbar() {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="md:hidden bg-luxury-900/95 backdrop-blur-sm"
+          className="md:hidden bg-black/95 backdrop-blur-sm"
         >
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (

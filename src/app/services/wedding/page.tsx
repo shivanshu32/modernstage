@@ -87,7 +87,7 @@ export default function WeddingPlanning() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/the_taj_mahal_hotel.jpg"
+            src="/wedding/81c5435beaba5ff15f049b201ce2ff43-2.jpg"
             alt="Wedding Planning"
             fill
             sizes="100vw"
@@ -277,7 +277,7 @@ export default function WeddingPlanning() {
             >
               <div className="h-64 relative">
                 <Image 
-                  src="/wedding/1000003559.jpg" 
+                  src="/wedding/81c5435beaba5ff15f049b201ce2ff43-2.jpg" 
                   alt="Destination Wedding" 
                   fill 
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -303,7 +303,7 @@ export default function WeddingPlanning() {
             >
               <div className="h-64 relative">
                 <Image 
-                  src="/wedding/1000003571.jpg" 
+                  src="/wedding/aff38d8c456720a4fd19708be4cdc1c9.jpg" 
                   alt="Wedding Decorations" 
                   fill 
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -329,7 +329,7 @@ export default function WeddingPlanning() {
             >
               <div className="h-64 relative">
                 <Image 
-                  src="/wedding/1000003576.jpg" 
+                  src="/wedding/3a9fa10d5c7920755d3a7fedd773bcdc.jpg" 
                   alt="Wedding Entertainment" 
                   fill 
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -355,7 +355,7 @@ export default function WeddingPlanning() {
             >
               <div className="h-64 relative">
                 <Image 
-                  src="/wedding/1000003582.jpg" 
+                  src="/wedding/7308eacd6bafa8f3805de3c28940a069.jpg" 
                   alt="Wedding Logistics" 
                   fill 
                   sizes="(max-width: 768px) 100vw, 50vw"
@@ -381,7 +381,7 @@ export default function WeddingPlanning() {
             >
               <div className="h-64 relative">
                 <Image 
-                  src="/wedding/1000003588.jpg" 
+                  src="/wedding/2cbd9b8f54fa4086cd2cdd8ff2d2fee7.jpg" 
                   alt="Wedding Hospitality" 
                   fill 
                   sizes="(max-width: 768px) 100vw, 100vw"
@@ -396,6 +396,43 @@ export default function WeddingPlanning() {
                 </p>
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Live Production Section */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-3xl md:text-4xl font-bold mb-6">
+              <span className="text-gradient">Live Production Excellence</span>
+            </h2>
+          </motion.div>
+          
+          <div className="rounded-lg overflow-hidden border border-dark-700">
+            <div className="h-80 relative">
+              <Image 
+                src="/wedding/38d0a56844bb1987912d2ddaa8e27c7b.jpg" 
+                alt="Wedding Live Production" 
+                fill 
+                sizes="100vw"
+                quality={85}
+                className="object-cover"
+              />
+            </div>
+            <div className="p-8 text-center max-w-4xl mx-auto">
+              <p className="text-gray-300 text-lg mb-6">
+                Our state-of-the-art live production services ensure that every moment of your special day is captured with cinematic precision. From professional videography and photography to immersive sound systems and dynamic lighting, our technical team creates a sensory experience that elevates your celebration.
+              </p>
+              <p className="text-gray-300 text-lg">
+                We utilize cutting-edge equipment and techniques to document your wedding journey, providing you with stunning memories that will last a lifetime. Our experienced production team works discreetly in the background, ensuring all technical aspects run flawlessly while you focus on enjoying your celebration.
+              </p>
+            </div>
           </div>
         </div>
       </section>

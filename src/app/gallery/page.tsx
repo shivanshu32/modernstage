@@ -39,7 +39,7 @@ export default function GalleryPage() {
   };
 
   return (
-    <div className="min-h-screen py-20 bg-luxury-900">
+    <div className="min-h-screen py-20 bg-black">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl md:text-5xl font-bold text-center mb-8 text-gradient">Gallery</h1>
         

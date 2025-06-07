@@ -83,55 +83,40 @@ export default function VenueBooking() {
 
       {/* Services Overview */}
       <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            <span className="text-gradient">Our Venue Services</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold mb-4">
+              <span className="text-gradient">Our Venue Services</span>
+            </h2>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+              Comprehensive venue solutions tailored to your event needs, from local to international locations.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {venueServices.map((service, index) => (
               <motion.div
                 key={service.title}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="rounded-lg p-6 transition-colors"
-                style={{ backgroundColor: '#110606' }}
-                whileHover={{ backgroundColor: '#1a0a0a' }}
+                className="relative group"
               >
-                <h3 className="text-xl font-semibold mb-4">{service.title}</h3>
-                <p className="text-gray-400 mb-6">{service.description}</p>
-                <ul className="space-y-2">
-                  {service.features.map((feature, i) => (
-                    <li key={i} className="flex items-center text-gray-300">
-                      <span className="text-yellow-400 mr-2">✓</span>
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Venue Types */}
-      <section className="py-20 bg-black">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-            <span className="text-gradient">Venue Types</span>
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {venueTypes.map((type, index) => (
-              <motion.div
-                key={type.title}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="text-center"
-              >
-                <div className="text-4xl mb-4">{type.icon}</div>
-                <h3 className="text-xl font-semibold mb-4">{type.title}</h3>
-                <p className="text-gray-400">{type.description}</p>
+                <div className="absolute -inset-1 bg-gradient-to-r from-yellow-500 to-yellow-200 rounded-lg blur opacity-0 group-hover:opacity-100 transition duration-300"></div>
+                <div className="relative rounded-lg p-6 h-full" style={{ backgroundColor: '#110606' }}>
+                  <h3 className="text-2xl font-bold mb-4">{service.title}</h3>
+                  {service.subtitle && (
+                    <p className="text-yellow-400 font-medium mb-4">{service.subtitle}</p>
+                  )}
+                  <p className="text-gray-300 mb-6">{service.description}</p>
+                  <ul className="space-y-3">
+                    {service.features.map((feature, i) => (
+                      <li key={i} className="flex items-start">
+                        <span className="text-yellow-400 mt-1 mr-2">✓</span>
+                        <span className="text-gray-300">{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
               </motion.div>
             ))}
           </div>
@@ -140,6 +125,91 @@ export default function VenueBooking() {
 
       {/* Spacer section to maintain layout rhythm */}
       <div className="py-10 bg-black"></div>
+
+      {/* Featured Venues Section */}
+      <section className="py-20 bg-black">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+            <span className="text-gradient">Featured Venues</span>
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Featured Venue 1 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="relative group overflow-hidden rounded-lg"
+            >
+              <div className="relative h-80">
+                <Image
+                  src="/corporate/ballroom-corp_resized.jpg"
+                  alt="Luxury Ballroom"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={75}
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center p-4">
+                    <h3 className="text-xl font-semibold mb-2">Luxury Ballroom</h3>
+                    <p className="text-sm">Perfect for grand corporate events and elegant celebrations.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Featured Venue 2 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="relative group overflow-hidden rounded-lg"
+            >
+              <div className="relative h-80">
+                <Image
+                  src="/corporate/aria-hotel-event.jpg"
+                  alt="Aria Hotel Venue"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={75}
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center p-4">
+                    <h3 className="text-xl font-semibold mb-2">Aria Hotel Venue</h3>
+                    <p className="text-sm">Sophisticated space for conferences and upscale gatherings.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+
+            {/* Featured Venue 3 */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+              className="relative group overflow-hidden rounded-lg"
+            >
+              <div className="relative h-80">
+                <Image
+                  src="/corporate/venue-booking.jpg"
+                  alt="Outdoor Event Space"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  quality={75}
+                  className="object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-50 transition-opacity duration-300 flex items-center justify-center">
+                  <div className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 text-center p-4">
+                    <h3 className="text-xl font-semibold mb-2">Outdoor Event Space</h3>
+                    <p className="text-sm">Breathtaking open-air venue for memorable events under the sky.</p>
+                  </div>
+                </div>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-20 bg-black">
@@ -164,62 +234,37 @@ export default function VenueBooking() {
 
 const venueServices = [
   {
-    title: 'Venue Sourcing',
-    description: 'Comprehensive venue search and selection services.',
-    icon: '🔍',
+    title: 'Venue Booking',
+    description: 'Comprehensive venue booking services for all types of events, ensuring the perfect setting for your occasion.',
     features: [
-      'Personalized venue recommendations',
-      'Virtual and in-person tours',
-      'Budget-aligned options',
-      'Capacity and logistics assessment',
-      'Venue comparison reports',
-    ],
-  },
-  {
-    title: 'Booking Management',
-    description: 'Professional venue booking and contract management.',
-    icon: '📝',
-    features: [
-      'Contract negotiation',
-      'Date reservation',
-      'Deposit management',
-      'Terms and conditions review',
+      'Expert venue selection and booking',
+      'Contract negotiation and management',
+      'Budget planning and management',
       'Vendor coordination',
-    ],
+      'Full event support'
+    ]
   },
   {
-    title: 'Venue Planning',
-    description: 'Detailed planning and coordination for your chosen venue.',
-    icon: '📋',
+    title: 'Destination Venue',
+    subtitle: '500+ Weddings Successfully Executed',
+    description: 'Expertly planned destination weddings in the most beautiful locations, making your special day unforgettable.',
     features: [
-      'Floor plan design',
-      'Space optimization',
-      'Technical requirements',
-      'Accessibility planning',
-      'On-site coordination',
-    ],
-  },
-];
-
-const venueTypes = [
-  {
-    title: 'Hotels & Resorts',
-    description: 'Luxury hotels and resorts with full-service amenities.',
-    icon: '🏨',
+      'Destination wedding planning',
+      'Local venue expertise',
+      'Guest accommodation management',
+      'Travel and logistics coordination',
+      'Cultural and legal guidance'
+    ]
   },
   {
-    title: 'Banquet Halls',
-    description: 'Dedicated event spaces with flexible configurations.',
-    icon: '🎪',
-  },
-  {
-    title: 'Outdoor Venues',
-    description: 'Beautiful gardens, beaches, and open-air locations.',
-    icon: '🌳',
-  },
-  {
-    title: 'Unique Spaces',
-    description: 'Distinctive and unconventional venue options.',
-    icon: '🏛️',
-  },
+    title: 'International Wedding',
+    description: 'Seamless international wedding planning and execution, handling all aspects of your cross-border celebration.',
+    features: [
+      'Global venue selection',
+      'International vendor coordination',
+      'Travel and accommodation planning',
+      'Legal and documentation assistance',
+      'Multilingual support'
+    ]
+  }
 ];
